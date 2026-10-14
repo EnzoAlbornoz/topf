@@ -10,7 +10,7 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/postfinance/topf/internal/cmd/upgrade"
+	"github.com/enzoalbornoz/topf/internal/cmd/upgrade"
 	"github.com/siderolabs/talos/cmd/talosctl/pkg/talos/nodedrain"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	"github.com/siderolabs/talos/pkg/machinery/resources/runtime"

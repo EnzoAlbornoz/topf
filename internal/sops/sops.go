@@ -13,7 +13,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/postfinance/topf/internal/yamlutils"
+	"github.com/enzoalbornoz/topf/internal/yamlutils"
 )
 
 // IsEncrypted checks whether a file is encrypted with SOPS by running

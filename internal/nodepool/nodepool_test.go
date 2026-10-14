@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/postfinance/topf/internal/topf"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/pkg/config"
 )
 
 func nodes(n int) []*topf.Node {

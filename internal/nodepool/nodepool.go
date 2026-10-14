@@ -17,8 +17,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/postfinance/topf/internal/topf"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/pkg/config"
 )
 
 // MaxParallel describes how many nodes may be processed concurrently. It is

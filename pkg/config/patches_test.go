@@ -13,7 +13,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/postfinance/topf/internal/decryption"
+	"github.com/enzoalbornoz/topf/internal/decryption"
 	"github.com/siderolabs/talos/pkg/machinery/config/configpatcher"
 )
 

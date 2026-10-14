@@ -10,7 +10,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/siderolabs/talos/pkg/machinery/config/encoder"
 	"github.com/urfave/cli/v3"
 )

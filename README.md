@@ -4,8 +4,8 @@
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/postfinance/topf)](https://go.dev/)
 [![License](https://img.shields.io/github/license/postfinance/topf)](LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/postfinance/topf)](https://goreportcard.com/report/github.com/postfinance/topf)
-[![Latest Release](https://img.shields.io/github/v/release/postfinance/topf)](https://github.com/postfinance/topf/releases/latest)
+[![Go Report Card](https://goreportcard.com/badge/github.com/enzoalbornoz/topf)](https://goreportcard.com/report/github.com/enzoalbornoz/topf)
+[![Latest Release](https://img.shields.io/github/v/release/postfinance/topf)](https://github.com/enzoalbornoz/topf/releases/latest)
 
 TOPF is managing [Talos](https://www.talos.dev/) based Kubernetes
 clusters. It provides functionality for bootstrapping new clusters,
@@ -26,12 +26,12 @@ brew install postfinance/tap/topf
 ### Go Install
 
 ```bash
-go install github.com/postfinance/topf/cmd/topf@latest
+go install github.com/enzoalbornoz/topf/cmd/topf@latest
 ```
 
 ### Binary Download
 
-Download the latest binary from [GitHub Releases](https://github.com/postfinance/topf/releases/latest).
+Download the latest binary from [GitHub Releases](https://github.com/enzoalbornoz/topf/releases/latest).
 
 ### Container Image
 

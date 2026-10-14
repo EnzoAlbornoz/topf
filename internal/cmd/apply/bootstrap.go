@@ -9,8 +9,8 @@ import (
 	"log/slog"
 	"time"
 
-	"github.com/postfinance/topf/internal/topf"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/pkg/config"
 	"github.com/siderolabs/go-retry/retry"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	"github.com/siderolabs/talos/pkg/machinery/client"

@@ -17,7 +17,7 @@ import (
 	"math/big"
 	"time"
 
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/siderolabs/talos/pkg/machinery/config/generate/secrets"
 	"k8s.io/client-go/tools/clientcmd/api"
 )

@@ -7,7 +7,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/postfinance/topf/internal/cmd/schematicids"
+	"github.com/enzoalbornoz/topf/internal/cmd/schematicids"
 	"github.com/urfave/cli/v3"
 )
 

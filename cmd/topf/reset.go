@@ -6,7 +6,7 @@ package main
 import (
 	"context"
 
-	"github.com/postfinance/topf/internal/cmd/reset"
+	"github.com/enzoalbornoz/topf/internal/cmd/reset"
 	"github.com/urfave/cli/v3"
 )
 

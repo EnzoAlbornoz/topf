@@ -4,371 +4,371 @@
 
 ### Features
 
-- Add shell completion command ([67cc807](https://github.com/postfinance/topf/commit/67cc8074ef90b59acb3ed18c794883950cad4e1f))
-- **autocomplete**: Add safeguards and display root flags ([3833ab7](https://github.com/postfinance/topf/commit/3833ab76679bc8455ffa76ec4d6257e3b7e83286))
-- Add support for JSON logging (#139) ([dbb6051](https://github.com/postfinance/topf/commit/dbb605161f5ce601fc4dcbfcafe437a070ec5a77))
-- Allow skipping node prechecks on upgrade (#138) ([b054fdf](https://github.com/postfinance/topf/commit/b054fdfd5977faa7722ac3ea08f798d8d192806a))
-- **log**: Add talos' live reporter mode for upgrades (#154) ([4921201](https://github.com/postfinance/topf/commit/49212013ee8cb8f99b0b30e9f19eb1486bb72936))
-- **apply**: Add colored diffs (#156) ([52d3949](https://github.com/postfinance/topf/commit/52d3949e720bfcf1bd56641a9a6734794305f3e9))
+- Add shell completion command ([67cc807](https://github.com/enzoalbornoz/topf/commit/67cc8074ef90b59acb3ed18c794883950cad4e1f))
+- **autocomplete**: Add safeguards and display root flags ([3833ab7](https://github.com/enzoalbornoz/topf/commit/3833ab76679bc8455ffa76ec4d6257e3b7e83286))
+- Add support for JSON logging (#139) ([dbb6051](https://github.com/enzoalbornoz/topf/commit/dbb605161f5ce601fc4dcbfcafe437a070ec5a77))
+- Allow skipping node prechecks on upgrade (#138) ([b054fdf](https://github.com/enzoalbornoz/topf/commit/b054fdfd5977faa7722ac3ea08f798d8d192806a))
+- **log**: Add talos' live reporter mode for upgrades (#154) ([4921201](https://github.com/enzoalbornoz/topf/commit/49212013ee8cb8f99b0b30e9f19eb1486bb72936))
+- **apply**: Add colored diffs (#156) ([52d3949](https://github.com/enzoalbornoz/topf/commit/52d3949e720bfcf1bd56641a9a6734794305f3e9))
 
 ### Bug Fixes
 
-- **upgrade**: Replace skip-prechecks with allow-not-ready ([e697499](https://github.com/postfinance/topf/commit/e6974997ad7acbdbcbaebeee78de0bafeecb740a))
-- **confirmations**: Prevent concurrent prompts and improve nonTTY usecase ([db40e24](https://github.com/postfinance/topf/commit/db40e240f4716a0a51d1f06c46b5d04e81a90a43))
-- Send interactive prompts to stdErr and improve secrets doc ([8ae51c8](https://github.com/postfinance/topf/commit/8ae51c8a49e93c37b5d506c569093ad45e54538a))
-- **log**: Set proper level for retry library logs ([35d5c9e](https://github.com/postfinance/topf/commit/35d5c9e2749ad86a7d213e67811fee0dd8b3f50f))
+- **upgrade**: Replace skip-prechecks with allow-not-ready ([e697499](https://github.com/enzoalbornoz/topf/commit/e6974997ad7acbdbcbaebeee78de0bafeecb740a))
+- **confirmations**: Prevent concurrent prompts and improve nonTTY usecase ([db40e24](https://github.com/enzoalbornoz/topf/commit/db40e240f4716a0a51d1f06c46b5d04e81a90a43))
+- Send interactive prompts to stdErr and improve secrets doc ([8ae51c8](https://github.com/enzoalbornoz/topf/commit/8ae51c8a49e93c37b5d506c569093ad45e54538a))
+- **log**: Set proper level for retry library logs ([35d5c9e](https://github.com/enzoalbornoz/topf/commit/35d5c9e2749ad86a7d213e67811fee0dd8b3f50f))
 
 ### Documentation
 
-- Migrate example to v1.14.0 and improve migration skill ([2142812](https://github.com/postfinance/topf/commit/2142812ffa1c38ba5dc5a28774526899f1622637))
-- **skills**: Add lessons from a real talhelper migration to migrate-talhelper-to-topf ([079186c](https://github.com/postfinance/topf/commit/079186c82a78ae2222f18d51f6e82bc3636306c4))
-- **contributing**: Add 'allow edit by maintainers' notice ([bc57db9](https://github.com/postfinance/topf/commit/bc57db9cf569ada8f830115e50d87b21b569aea2))
-- **secrets**: Improve secrets creation doc ([1a34ea1](https://github.com/postfinance/topf/commit/1a34ea150378d247b066ed9d269e32d8b6726344))
+- Migrate example to v1.14.0 and improve migration skill ([2142812](https://github.com/enzoalbornoz/topf/commit/2142812ffa1c38ba5dc5a28774526899f1622637))
+- **skills**: Add lessons from a real talhelper migration to migrate-talhelper-to-topf ([079186c](https://github.com/enzoalbornoz/topf/commit/079186c82a78ae2222f18d51f6e82bc3636306c4))
+- **contributing**: Add 'allow edit by maintainers' notice ([bc57db9](https://github.com/enzoalbornoz/topf/commit/bc57db9cf569ada8f830115e50d87b21b569aea2))
+- **secrets**: Improve secrets creation doc ([1a34ea1](https://github.com/enzoalbornoz/topf/commit/1a34ea150378d247b066ed9d269e32d8b6726344))
 
 ### Testing
 
-- Add e2e topf integration tests ([22f2dda](https://github.com/postfinance/topf/commit/22f2dda15f5718c3eb5cc803a2e087f2457679aa))
+- Add e2e topf integration tests ([22f2dda](https://github.com/enzoalbornoz/topf/commit/22f2dda15f5718c3eb5cc803a2e087f2457679aa))
 
 ### Miscellaneous
 
-- Update changelog ([49e1494](https://github.com/postfinance/topf/commit/49e1494443dcd921540989ea54579706078681e2))
-- Replace logo with SVG version ([9e8a2a5](https://github.com/postfinance/topf/commit/9e8a2a5ecc6178932e01e6a4008be811724b4a50))
-- Improve docs around skip-node-prechecks ([4fecfd9](https://github.com/postfinance/topf/commit/4fecfd9ed31e688cbff512d486681691beb754ba))
-- **upgrade**: Report image pull start with rep.Running ([55b1597](https://github.com/postfinance/topf/commit/55b15973b8370bab47864d692b5250017575c3f6))
+- Update changelog ([49e1494](https://github.com/enzoalbornoz/topf/commit/49e1494443dcd921540989ea54579706078681e2))
+- Replace logo with SVG version ([9e8a2a5](https://github.com/enzoalbornoz/topf/commit/9e8a2a5ecc6178932e01e6a4008be811724b4a50))
+- Improve docs around skip-node-prechecks ([4fecfd9](https://github.com/enzoalbornoz/topf/commit/4fecfd9ed31e688cbff512d486681691beb754ba))
+- **upgrade**: Report image pull start with rep.Running ([55b1597](https://github.com/enzoalbornoz/topf/commit/55b15973b8370bab47864d692b5250017575c3f6))
 
 ### Build
 
-- Bump talos api+machinery to v1.14.1 ([9491acc](https://github.com/postfinance/topf/commit/9491acc21b8286058040eee085c74f8529f1f7fe))
-- **deps**: Bump image factory, urfave/cli and go/sync ([fef2d85](https://github.com/postfinance/topf/commit/fef2d852d08b580f091cf13d65104b5572597515))
-- **deps**: Update gh-actions ([af41ea8](https://github.com/postfinance/topf/commit/af41ea80e74473cf25093142b54bd1eac339eef0))
+- Bump talos api+machinery to v1.14.1 ([9491acc](https://github.com/enzoalbornoz/topf/commit/9491acc21b8286058040eee085c74f8529f1f7fe))
+- **deps**: Bump image factory, urfave/cli and go/sync ([fef2d85](https://github.com/enzoalbornoz/topf/commit/fef2d852d08b580f091cf13d65104b5572597515))
+- **deps**: Update gh-actions ([af41ea8](https://github.com/enzoalbornoz/topf/commit/af41ea80e74473cf25093142b54bd1eac339eef0))
 ## [0.6.0] - 2026-09-03
 
 ### Features
 
-- Add --stabilization-duration flag for apply and upgrade ([c537ffe](https://github.com/postfinance/topf/commit/c537ffe096549dd2b419c62f71200ae23f0d65a7))
-- Add support for v1.14 config documents ([4729f2a](https://github.com/postfinance/topf/commit/4729f2ab749efd2f2e1396b418458b52644e2e35))
-- Add .Node.RuntimeData templating capabilities ([924a3d8](https://github.com/postfinance/topf/commit/924a3d84f813dde9d713f1ee86f6fe26f4dd671f))
+- Add --stabilization-duration flag for apply and upgrade ([c537ffe](https://github.com/enzoalbornoz/topf/commit/c537ffe096549dd2b419c62f71200ae23f0d65a7))
+- Add support for v1.14 config documents ([4729f2a](https://github.com/enzoalbornoz/topf/commit/4729f2ab749efd2f2e1396b418458b52644e2e35))
+- Add .Node.RuntimeData templating capabilities ([924a3d8](https://github.com/enzoalbornoz/topf/commit/924a3d84f813dde9d713f1ee86f6fe26f4dd671f))
 
 ### Bug Fixes
 
-- **interactive**: Prevent looping forever when input cannot be read ([fb82e39](https://github.com/postfinance/topf/commit/fb82e3984626f8e97d03281f6dd7090863d4b068))
-- **docs**: Graceful default is now true ([2183171](https://github.com/postfinance/topf/commit/21831714b9adf33a20c9bf8688a4ac8202744ece))
-- Reuse upstream unattendedInstall defaults ([9cfe440](https://github.com/postfinance/topf/commit/9cfe440ffb3ab8e7ea30e7b5939bb5a70c4529e8))
-- **secrets-redaction**: Handle multi-line PEM secrets and stop redacting public key material ([21c2a50](https://github.com/postfinance/topf/commit/21c2a5064042f654f8328cc1a5798461e59f12c1))
+- **interactive**: Prevent looping forever when input cannot be read ([fb82e39](https://github.com/enzoalbornoz/topf/commit/fb82e3984626f8e97d03281f6dd7090863d4b068))
+- **docs**: Graceful default is now true ([2183171](https://github.com/enzoalbornoz/topf/commit/21831714b9adf33a20c9bf8688a4ac8202744ece))
+- Reuse upstream unattendedInstall defaults ([9cfe440](https://github.com/enzoalbornoz/topf/commit/9cfe440ffb3ab8e7ea30e7b5939bb5a70c4529e8))
+- **secrets-redaction**: Handle multi-line PEM secrets and stop redacting public key material ([21c2a50](https://github.com/enzoalbornoz/topf/commit/21c2a5064042f654f8328cc1a5798461e59f12c1))
 
 ### Documentation
 
-- Remove 'early stage project' warning ([a8c246c](https://github.com/postfinance/topf/commit/a8c246cd2f93c25e4065239c2d88964c94f09863))
-- Add skills (talphelper migration and v1.14 migration) ([f6e7c59](https://github.com/postfinance/topf/commit/f6e7c59f78e6beee8d60b42fb1767d704ebcc928))
+- Remove 'early stage project' warning ([a8c246c](https://github.com/enzoalbornoz/topf/commit/a8c246cd2f93c25e4065239c2d88964c94f09863))
+- Add skills (talphelper migration and v1.14 migration) ([f6e7c59](https://github.com/enzoalbornoz/topf/commit/f6e7c59f78e6beee8d60b42fb1767d704ebcc928))
 
 ### Miscellaneous
 
-- Update changelog ([2b367d9](https://github.com/postfinance/topf/commit/2b367d96ad3f137c6f91dff3e3857135af76acf0))
-- Refactor cache ([ee1d4dd](https://github.com/postfinance/topf/commit/ee1d4ddd143a872c8e7912c439b088b99125a976))
-- **cache**: Fix comment ([77e74ac](https://github.com/postfinance/topf/commit/77e74ac766dd35fe8321c5d876d495d15098dcb4))
-- Update command flags to include default value ([f947480](https://github.com/postfinance/topf/commit/f9474801e550bd4d4a8a70d675395c0081e4cdce))
-- **reset**: Update default value for graceful flag to true ([fba9adb](https://github.com/postfinance/topf/commit/fba9adbde1a813249be098ec8da4be820b186f8a))
-- Move default string to consts to make linter happy ([faba2b3](https://github.com/postfinance/topf/commit/faba2b36f9712a0246181042e07a0f990d115990))
+- Update changelog ([2b367d9](https://github.com/enzoalbornoz/topf/commit/2b367d96ad3f137c6f91dff3e3857135af76acf0))
+- Refactor cache ([ee1d4dd](https://github.com/enzoalbornoz/topf/commit/ee1d4ddd143a872c8e7912c439b088b99125a976))
+- **cache**: Fix comment ([77e74ac](https://github.com/enzoalbornoz/topf/commit/77e74ac766dd35fe8321c5d876d495d15098dcb4))
+- Update command flags to include default value ([f947480](https://github.com/enzoalbornoz/topf/commit/f9474801e550bd4d4a8a70d675395c0081e4cdce))
+- **reset**: Update default value for graceful flag to true ([fba9adb](https://github.com/enzoalbornoz/topf/commit/fba9adbde1a813249be098ec8da4be820b186f8a))
+- Move default string to consts to make linter happy ([faba2b3](https://github.com/enzoalbornoz/topf/commit/faba2b36f9712a0246181042e07a0f990d115990))
 
 ### Ddocs
 
-- Add contributing.md and go vet (#122) ([705f198](https://github.com/postfinance/topf/commit/705f19847ef02f90923f84e1be4f573aae0f893f))
+- Add contributing.md and go vet (#122) ([705f198](https://github.com/enzoalbornoz/topf/commit/705f19847ef02f90923f84e1be4f573aae0f893f))
 ## [0.5.0] - 2026-08-10
 
 ### Features
 
-- New LifecycleServiceRPC upgrade API ([ad778d2](https://github.com/postfinance/topf/commit/ad778d2aeda110b04b2741e0f0993abbd18a1aa3))
-- **upgrade**: Add delete-if-eviction-fails flag for stubborn PDBs (#107) ([2a60138](https://github.com/postfinance/topf/commit/2a60138c4ef36c43b6d6d175cd8db9a3c241f9e0))
-- Add 'staged' upgrade flag with optional annotation/label/taint (#108) ([05d0ad9](https://github.com/postfinance/topf/commit/05d0ad931fbf857caf9652f266b1b5809bec2ca2))
+- New LifecycleServiceRPC upgrade API ([ad778d2](https://github.com/enzoalbornoz/topf/commit/ad778d2aeda110b04b2741e0f0993abbd18a1aa3))
+- **upgrade**: Add delete-if-eviction-fails flag for stubborn PDBs (#107) ([2a60138](https://github.com/enzoalbornoz/topf/commit/2a60138c4ef36c43b6d6d175cd8db9a3c241f9e0))
+- Add 'staged' upgrade flag with optional annotation/label/taint (#108) ([05d0ad9](https://github.com/enzoalbornoz/topf/commit/05d0ad931fbf857caf9652f266b1b5809bec2ca2))
 
 ### Documentation
 
-- Lint and add markdownlint job (#109) ([bc7d316](https://github.com/postfinance/topf/commit/bc7d3169be3b9792de71ec747329a77b62e84b0d))
+- Lint and add markdownlint job (#109) ([bc7d316](https://github.com/enzoalbornoz/topf/commit/bc7d3169be3b9792de71ec747329a77b62e84b0d))
 
 ### Miscellaneous
 
-- Update changelog ([0ed051b](https://github.com/postfinance/topf/commit/0ed051b5567f6a40a2e67fedba34a14f0abbc757))
+- Update changelog ([0ed051b](https://github.com/enzoalbornoz/topf/commit/0ed051b5567f6a40a2e67fedba34a14f0abbc757))
 
 ### Build
 
-- Bump go dependencies ([bbbe8cb](https://github.com/postfinance/topf/commit/bbbe8cbc0ee2875565e7035e30f2a7f769323953))
-- Upgrade gh-actions and go mods (#110) ([d2c22c6](https://github.com/postfinance/topf/commit/d2c22c6398584d2e637af550e796212f1485765a))
-- Gh-action upgrades (#111) ([d33d33a](https://github.com/postfinance/topf/commit/d33d33aca63de7a74f5f35e03de0804d41a26e9a))
+- Bump go dependencies ([bbbe8cb](https://github.com/enzoalbornoz/topf/commit/bbbe8cbc0ee2875565e7035e30f2a7f769323953))
+- Upgrade gh-actions and go mods (#110) ([d2c22c6](https://github.com/enzoalbornoz/topf/commit/d2c22c6398584d2e637af550e796212f1485765a))
+- Gh-action upgrades (#111) ([d33d33a](https://github.com/enzoalbornoz/topf/commit/d33d33aca63de7a74f5f35e03de0804d41a26e9a))
 ## [0.4.2] - 2026-06-22
 
 ### Features
 
-- Concurrent upgrade/apply with --max-parallel=... flag ([c0bebc7](https://github.com/postfinance/topf/commit/c0bebc7b736d1017a94d428afc5e70806fd5910c))
+- Concurrent upgrade/apply with --max-parallel=... flag ([c0bebc7](https://github.com/enzoalbornoz/topf/commit/c0bebc7b736d1017a94d428afc5e70806fd5910c))
 
 ### Documentation
 
-- Fixed typo 'you cluster' to 'your cluster' in documentation ([66f0e32](https://github.com/postfinance/topf/commit/66f0e32ccdf966871be3c198982af5531e2f7390))
-- Improve README.md and getting-started example ([df22bb6](https://github.com/postfinance/topf/commit/df22bb6dc0f026bcb0188e8dd7e9e456aa706950))
-- Extract mkdocs deps to requirements.txt and validate build on PRs (#99) ([6c4328d](https://github.com/postfinance/topf/commit/6c4328d254637dbcf009ecdb3e4d2d32977960f4))
+- Fixed typo 'you cluster' to 'your cluster' in documentation ([66f0e32](https://github.com/enzoalbornoz/topf/commit/66f0e32ccdf966871be3c198982af5531e2f7390))
+- Improve README.md and getting-started example ([df22bb6](https://github.com/enzoalbornoz/topf/commit/df22bb6dc0f026bcb0188e8dd7e9e456aa706950))
+- Extract mkdocs deps to requirements.txt and validate build on PRs (#99) ([6c4328d](https://github.com/enzoalbornoz/topf/commit/6c4328d254637dbcf009ecdb3e4d2d32977960f4))
 
 ### Miscellaneous
 
-- Update changelog ([c85d2f1](https://github.com/postfinance/topf/commit/c85d2f100e370dbec7944bd635a819f79a0214c8))
+- Update changelog ([c85d2f1](https://github.com/enzoalbornoz/topf/commit/c85d2f100e370dbec7944bd635a819f79a0214c8))
 
 ### Build
 
-- **gh-actions**: Pin gh actions ([af6fbfb](https://github.com/postfinance/topf/commit/af6fbfb979b37ccd00774a11289f5ad934e48f6b))
-- **deps**: Bump golangci/golangci-lint-action (#97) ([589b417](https://github.com/postfinance/topf/commit/589b417f79a26824a467144298fdf93f7c51a4d3))
-- **deps**: Bump actions/checkout from 6.0.3 to 7.0.0 (#98) ([2b2ac2c](https://github.com/postfinance/topf/commit/2b2ac2cd23342d14211db6bc56d08708f9b77174))
+- **gh-actions**: Pin gh actions ([af6fbfb](https://github.com/enzoalbornoz/topf/commit/af6fbfb979b37ccd00774a11289f5ad934e48f6b))
+- **deps**: Bump golangci/golangci-lint-action (#97) ([589b417](https://github.com/enzoalbornoz/topf/commit/589b417f79a26824a467144298fdf93f7c51a4d3))
+- **deps**: Bump actions/checkout from 6.0.3 to 7.0.0 (#98) ([2b2ac2c](https://github.com/enzoalbornoz/topf/commit/2b2ac2cd23342d14211db6bc56d08708f9b77174))
 ## [0.4.1] - 2026-06-10
 
 ### Features
 
-- **templates**: Register sprig functions in patch template FuncMap ([5ceb732](https://github.com/postfinance/topf/commit/5ceb7320d1f212929dd7bf8b25d23c893a71bf15))
-- Cache decrypted files and deduplicates secrets in maskedwriter ([e36a5d1](https://github.com/postfinance/topf/commit/e36a5d12735c12319cbca05752accd9a94f712d2))
-- Enable UPX and add back symbols table ([ee31fc3](https://github.com/postfinance/topf/commit/ee31fc327105237f06ea4bbbf6e06a0d1fc8c2c2))
+- **templates**: Register sprig functions in patch template FuncMap ([5ceb732](https://github.com/enzoalbornoz/topf/commit/5ceb7320d1f212929dd7bf8b25d23c893a71bf15))
+- Cache decrypted files and deduplicates secrets in maskedwriter ([e36a5d1](https://github.com/enzoalbornoz/topf/commit/e36a5d12735c12319cbca05752accd9a94f712d2))
+- Enable UPX and add back symbols table ([ee31fc3](https://github.com/enzoalbornoz/topf/commit/ee31fc327105237f06ea4bbbf6e06a0d1fc8c2c2))
 
 ### Bug Fixes
 
-- **bootstrap**: Also attempt bootstrap if etcd is in 'Waiting' state ([454cae7](https://github.com/postfinance/topf/commit/454cae74227e5b9126a68d1225aac7eb094ce36f))
-- **secrets-provider**: Missing secrets.yaml prompts to generate one ([c8ed227](https://github.com/postfinance/topf/commit/c8ed227c6f4354c5fb87aee73f466b845731842c))
-- **client**: Respect proxy env variables (like talosctl does) ([f2752b2](https://github.com/postfinance/topf/commit/f2752b235d38c800b576f79c816dd3e80c427529))
+- **bootstrap**: Also attempt bootstrap if etcd is in 'Waiting' state ([454cae7](https://github.com/enzoalbornoz/topf/commit/454cae74227e5b9126a68d1225aac7eb094ce36f))
+- **secrets-provider**: Missing secrets.yaml prompts to generate one ([c8ed227](https://github.com/enzoalbornoz/topf/commit/c8ed227c6f4354c5fb87aee73f466b845731842c))
+- **client**: Respect proxy env variables (like talosctl does) ([f2752b2](https://github.com/enzoalbornoz/topf/commit/f2752b235d38c800b576f79c816dd3e80c427529))
 
 ### Miscellaneous
 
-- Update changelog ([1554f58](https://github.com/postfinance/topf/commit/1554f585a2c163972c90d7751abbc4f3d882445d))
-- Add logo ([f16ef32](https://github.com/postfinance/topf/commit/f16ef3255584eb96ece3ee9a9cb393bc6fe0208a))
-- Switch documentation color to brown ([9781ecb](https://github.com/postfinance/topf/commit/9781ecb385d9b9f102e282dcd2a9e394e652218f))
-- Update example/ with saner defaults ([7998fb6](https://github.com/postfinance/topf/commit/7998fb6b996ba687de60eef50a743ded90a731be))
+- Update changelog ([1554f58](https://github.com/enzoalbornoz/topf/commit/1554f585a2c163972c90d7751abbc4f3d882445d))
+- Add logo ([f16ef32](https://github.com/enzoalbornoz/topf/commit/f16ef3255584eb96ece3ee9a9cb393bc6fe0208a))
+- Switch documentation color to brown ([9781ecb](https://github.com/enzoalbornoz/topf/commit/9781ecb385d9b9f102e282dcd2a9e394e652218f))
+- Update example/ with saner defaults ([7998fb6](https://github.com/enzoalbornoz/topf/commit/7998fb6b996ba687de60eef50a743ded90a731be))
 
 ### Build
 
-- Upgrade all go modules and bump to talos/v1.13.3 ([cc89f48](https://github.com/postfinance/topf/commit/cc89f48fb28587c0f8c8d5e93a49a1a189a51f34))
+- Upgrade all go modules and bump to talos/v1.13.3 ([cc89f48](https://github.com/enzoalbornoz/topf/commit/cc89f48fb28587c0f8c8d5e93a49a1a189a51f34))
 ## [0.4.0] - 2026-05-27
 
 ### Features
 
-- **secrets**: Store secrets.yaml in configDir if specified ([cd42cf7](https://github.com/postfinance/topf/commit/cd42cf770706cc3a0220af19b83ea50d79601f61))
-- **BREAKING**: Rename configDir to patchesDir and add secretsPath field ([dd8fc17](https://github.com/postfinance/topf/commit/dd8fc17307637ae7872d93012f21b5d6ca14e5c8))
-- Implement @path/schematic.yaml resolution ([dc795bc](https://github.com/postfinance/topf/commit/dc795bc7e766e34405ee8a74f38b187affd7d699))
-- Implement vals-based file processing ([a8b555e](https://github.com/postfinance/topf/commit/a8b555e836eae7d99125396a3cd86138d7946d4e))
-- Add 'schematic-ids' cmd ([81385f7](https://github.com/postfinance/topf/commit/81385f78c00cf58ccd59d7706722837fd8ebc0e1))
-- **upgrade-dry-run**: Return exitCode=2 when an upgrade is due ([98a5b3e](https://github.com/postfinance/topf/commit/98a5b3eed66b1d6a7ed1ee72b8e493d6b3586f3f))
+- **secrets**: Store secrets.yaml in configDir if specified ([cd42cf7](https://github.com/enzoalbornoz/topf/commit/cd42cf770706cc3a0220af19b83ea50d79601f61))
+- **BREAKING**: Rename configDir to patchesDir and add secretsPath field ([dd8fc17](https://github.com/enzoalbornoz/topf/commit/dd8fc17307637ae7872d93012f21b5d6ca14e5c8))
+- Implement @path/schematic.yaml resolution ([dc795bc](https://github.com/enzoalbornoz/topf/commit/dc795bc7e766e34405ee8a74f38b187affd7d699))
+- Implement vals-based file processing ([a8b555e](https://github.com/enzoalbornoz/topf/commit/a8b555e836eae7d99125396a3cd86138d7946d4e))
+- Add 'schematic-ids' cmd ([81385f7](https://github.com/enzoalbornoz/topf/commit/81385f78c00cf58ccd59d7706722837fd8ebc0e1))
+- **upgrade-dry-run**: Return exitCode=2 when an upgrade is due ([98a5b3e](https://github.com/enzoalbornoz/topf/commit/98a5b3eed66b1d6a7ed1ee72b8e493d6b3586f3f))
 
 ### Bug Fixes
 
-- **render**: Generate node configs concurrently ([b77389e](https://github.com/postfinance/topf/commit/b77389e2580ad94b308166d6d0aa460e01561bc3))
+- **render**: Generate node configs concurrently ([b77389e](https://github.com/enzoalbornoz/topf/commit/b77389e2580ad94b308166d6d0aa460e01561bc3))
 
 ### Documentation
 
-- Add vals decryption and make recent changes clearer ([ddd5eb4](https://github.com/postfinance/topf/commit/ddd5eb4644ee88ef434653e5a33e5fbad74cad49))
+- Add vals decryption and make recent changes clearer ([ddd5eb4](https://github.com/enzoalbornoz/topf/commit/ddd5eb4644ee88ef434653e5a33e5fbad74cad49))
 
 ### Miscellaneous
 
-- Update changelog ([6ec2b7b](https://github.com/postfinance/topf/commit/6ec2b7bb292220af1fa889e3a609bebda3e3f6c6))
+- Update changelog ([6ec2b7b](https://github.com/enzoalbornoz/topf/commit/6ec2b7bb292220af1fa889e3a609bebda3e3f6c6))
 
 ### Build
 
-- Refactor secret collection into yamlutils ([2397fd3](https://github.com/postfinance/topf/commit/2397fd343ae1db27486baa61c18b977139d42361))
-- Ignore RC builds in changelog ([5209ce4](https://github.com/postfinance/topf/commit/5209ce418ec0f81ffe88a208c1f43a7a5a5b9b87))
+- Refactor secret collection into yamlutils ([2397fd3](https://github.com/enzoalbornoz/topf/commit/2397fd343ae1db27486baa61c18b977139d42361))
+- Ignore RC builds in changelog ([5209ce4](https://github.com/enzoalbornoz/topf/commit/5209ce418ec0f81ffe88a208c1f43a7a5a5b9b87))
 ## [0.3.0] - 2026-05-12
 
 ### Features
 
-- **patches**: Least-precedence installer image patch and env ([407f083](https://github.com/postfinance/topf/commit/407f08370f715c40ea816b8262adde157d11580d))
-- Add factory/platform/version/schematicId config surface (#56) ([afb9d1b](https://github.com/postfinance/topf/commit/afb9d1bd48c102b1b2bb99d135a6996fafc1ac04))
-- Permit specifying secureboot for images ([3b97283](https://github.com/postfinance/topf/commit/3b97283fe3ba76f4e30869d0c93ed4a954ef87e4))
+- **patches**: Least-precedence installer image patch and env ([407f083](https://github.com/enzoalbornoz/topf/commit/407f08370f715c40ea816b8262adde157d11580d))
+- Add factory/platform/version/schematicId config surface (#56) ([afb9d1b](https://github.com/enzoalbornoz/topf/commit/afb9d1bd48c102b1b2bb99d135a6996fafc1ac04))
+- Permit specifying secureboot for images ([3b97283](https://github.com/enzoalbornoz/topf/commit/3b97283fe3ba76f4e30869d0c93ed4a954ef87e4))
 
 ### Bug Fixes
 
-- Also redact current/running node secrets (#62) ([e99c3c1](https://github.com/postfinance/topf/commit/e99c3c1872a6d436cf323c143d8102c944308148))
+- Also redact current/running node secrets (#62) ([e99c3c1](https://github.com/enzoalbornoz/topf/commit/e99c3c1872a6d436cf323c143d8102c944308148))
 
 ### Miscellaneous
 
-- Update changelog ([62700b7](https://github.com/postfinance/topf/commit/62700b71e1175ebe35f81a9a9c718afc626fa1fc))
-- Re-generate changelog with correct config ([9f73cf2](https://github.com/postfinance/topf/commit/9f73cf278dc57b98494a91aa45064c3ffbb88252))
-- Dependency upgrade (talos > 1.13.0) ([e99bcba](https://github.com/postfinance/topf/commit/e99bcba4116307f39ec48926a0f0788f0006ff85))
-- Ask confirmation before creating secrets (#63) ([05c442b](https://github.com/postfinance/topf/commit/05c442b01abd60be2bd16b1490843a25f59019fe))
+- Update changelog ([62700b7](https://github.com/enzoalbornoz/topf/commit/62700b71e1175ebe35f81a9a9c718afc626fa1fc))
+- Re-generate changelog with correct config ([9f73cf2](https://github.com/enzoalbornoz/topf/commit/9f73cf278dc57b98494a91aa45064c3ffbb88252))
+- Dependency upgrade (talos > 1.13.0) ([e99bcba](https://github.com/enzoalbornoz/topf/commit/e99bcba4116307f39ec48926a0f0788f0006ff85))
+- Ask confirmation before creating secrets (#63) ([05c442b](https://github.com/enzoalbornoz/topf/commit/05c442b01abd60be2bd16b1490843a25f59019fe))
 ## [0.2.3] - 2026-04-22
 
 ### Features
 
-- Redact sensitive data in dry runs outputs (#43) ([2c55b1a](https://github.com/postfinance/topf/commit/2c55b1a0f9898862c35734e4b87e9aeea12d9c1d))
-- Permit specifying custom apply mode (#48) ([3399b9c](https://github.com/postfinance/topf/commit/3399b9c24eb91a0a10ae4c32bc8f5af8f7b9cec5))
-- Add --wait-for-maintenance flag to reset (#42) ([1cc03e0](https://github.com/postfinance/topf/commit/1cc03e0c1f7e9daa6d3c0e90e6bca15b8ac7b205))
-- Dry-run returns exitCode=2 when changes are detected ([41b1804](https://github.com/postfinance/topf/commit/41b1804aafe86cedc7c6eaefa39bcc80f99ac377))
-- Add multi-version doc with 'mike' ([f084f70](https://github.com/postfinance/topf/commit/f084f7002a76075088d6d93d0e7de4b9ba580eb4))
-- Permit specifying flags as TOPF_ env vars ([ce24a23](https://github.com/postfinance/topf/commit/ce24a23f6e815264c9fe70ecbaee55ac79c3fa96))
+- Redact sensitive data in dry runs outputs (#43) ([2c55b1a](https://github.com/enzoalbornoz/topf/commit/2c55b1a0f9898862c35734e4b87e9aeea12d9c1d))
+- Permit specifying custom apply mode (#48) ([3399b9c](https://github.com/enzoalbornoz/topf/commit/3399b9c24eb91a0a10ae4c32bc8f5af8f7b9cec5))
+- Add --wait-for-maintenance flag to reset (#42) ([1cc03e0](https://github.com/enzoalbornoz/topf/commit/1cc03e0c1f7e9daa6d3c0e90e6bca15b8ac7b205))
+- Dry-run returns exitCode=2 when changes are detected ([41b1804](https://github.com/enzoalbornoz/topf/commit/41b1804aafe86cedc7c6eaefa39bcc80f99ac377))
+- Add multi-version doc with 'mike' ([f084f70](https://github.com/enzoalbornoz/topf/commit/f084f7002a76075088d6d93d0e7de4b9ba580eb4))
+- Permit specifying flags as TOPF_ env vars ([ce24a23](https://github.com/enzoalbornoz/topf/commit/ce24a23f6e815264c9fe70ecbaee55ac79c3fa96))
 
 ### Bug Fixes
 
-- **readme**: Rename old 'patches' folder to 'all' ([8403519](https://github.com/postfinance/topf/commit/8403519927f46e939dbf2beecb2a9161b97f3f60))
-- Process yaml files with leading empty doc ([3d1649c](https://github.com/postfinance/topf/commit/3d1649ce4e5a24b267b13e3beb4e01886dde9e4b))
-- **documentation**: Patches folder has been renamed to all ([6de1469](https://github.com/postfinance/topf/commit/6de14690f0de80f2e576020add579e2553cd212b))
+- **readme**: Rename old 'patches' folder to 'all' ([8403519](https://github.com/enzoalbornoz/topf/commit/8403519927f46e939dbf2beecb2a9161b97f3f60))
+- Process yaml files with leading empty doc ([3d1649c](https://github.com/enzoalbornoz/topf/commit/3d1649ce4e5a24b267b13e3beb4e01886dde9e4b))
+- **documentation**: Patches folder has been renamed to all ([6de1469](https://github.com/enzoalbornoz/topf/commit/6de14690f0de80f2e576020add579e2553cd212b))
 
 ### Documentation
 
-- Update according to latest changes ([408173b](https://github.com/postfinance/topf/commit/408173becce37fee243fbe9f4d39de2bea715d27))
+- Update according to latest changes ([408173b](https://github.com/enzoalbornoz/topf/commit/408173becce37fee243fbe9f4d39de2bea715d27))
 
 ### Miscellaneous
 
-- Update changelog ([109da70](https://github.com/postfinance/topf/commit/109da70e841e27afeb8e2b8396c9565f3b2c1ef7))
-- **readme**: Update talos/kubernetes versions ([2ee6431](https://github.com/postfinance/topf/commit/2ee64319bd495b40a48a28678ee3481d8b070275))
-- Refactor patch loading ([d9b049f](https://github.com/postfinance/topf/commit/d9b049f56d12bb1291d19b624f0b91c7e6b58864))
-- Upgrade go-deps ([20bd2d4](https://github.com/postfinance/topf/commit/20bd2d4299617a15c5b3db859fdce9f9bacc748c))
+- Update changelog ([109da70](https://github.com/enzoalbornoz/topf/commit/109da70e841e27afeb8e2b8396c9565f3b2c1ef7))
+- **readme**: Update talos/kubernetes versions ([2ee6431](https://github.com/enzoalbornoz/topf/commit/2ee64319bd495b40a48a28678ee3481d8b070275))
+- Refactor patch loading ([d9b049f](https://github.com/enzoalbornoz/topf/commit/d9b049f56d12bb1291d19b624f0b91c7e6b58864))
+- Upgrade go-deps ([20bd2d4](https://github.com/enzoalbornoz/topf/commit/20bd2d4299617a15c5b3db859fdce9f9bacc748c))
 
 ### Build
 
-- **deps**: Bump actions/deploy-pages from 4 to 5 (#38) ([e6cc23e](https://github.com/postfinance/topf/commit/e6cc23ea0df8c01ba291dd7b44de1fd54daf0296))
-- **deps**: Bump goreleaser/goreleaser-action from 6 to 7 (#28) ([3dacb07](https://github.com/postfinance/topf/commit/3dacb0706590f4666da7019f7bb0de78e0cb8dc4))
-- **deps**: Bump docker/setup-buildx-action from 3 to 4 (#30) ([f9e7ba5](https://github.com/postfinance/topf/commit/f9e7ba550055ce847bdcf47da458183271da039d))
-- **deps**: Bump docker/login-action from 3 to 4 (#29) ([5797495](https://github.com/postfinance/topf/commit/5797495babede5ed082cf1e24ef38c3bb3f7598c))
-- **deps**: Bump actions/upload-pages-artifact from 4 to 5 (#46) ([5c799f1](https://github.com/postfinance/topf/commit/5c799f1660db1129c1315a9e86591acf2b792939))
-- Add pre-release builds support ([c29cade](https://github.com/postfinance/topf/commit/c29cadedfd94146af83dda8698ecd14c3f007ff3))
-- Fix goreleaser config field ([0718664](https://github.com/postfinance/topf/commit/07186643473496fcaf5289c6f7873ea7abbb0cfe))
-- Prevent changelog generation with pre-release builds ([1263d8a](https://github.com/postfinance/topf/commit/1263d8aac7410bef1ed6305252393c5f2e14be1e))
+- **deps**: Bump actions/deploy-pages from 4 to 5 (#38) ([e6cc23e](https://github.com/enzoalbornoz/topf/commit/e6cc23ea0df8c01ba291dd7b44de1fd54daf0296))
+- **deps**: Bump goreleaser/goreleaser-action from 6 to 7 (#28) ([3dacb07](https://github.com/enzoalbornoz/topf/commit/3dacb0706590f4666da7019f7bb0de78e0cb8dc4))
+- **deps**: Bump docker/setup-buildx-action from 3 to 4 (#30) ([f9e7ba5](https://github.com/enzoalbornoz/topf/commit/f9e7ba550055ce847bdcf47da458183271da039d))
+- **deps**: Bump docker/login-action from 3 to 4 (#29) ([5797495](https://github.com/enzoalbornoz/topf/commit/5797495babede5ed082cf1e24ef38c3bb3f7598c))
+- **deps**: Bump actions/upload-pages-artifact from 4 to 5 (#46) ([5c799f1](https://github.com/enzoalbornoz/topf/commit/5c799f1660db1129c1315a9e86591acf2b792939))
+- Add pre-release builds support ([c29cade](https://github.com/enzoalbornoz/topf/commit/c29cadedfd94146af83dda8698ecd14c3f007ff3))
+- Fix goreleaser config field ([0718664](https://github.com/enzoalbornoz/topf/commit/07186643473496fcaf5289c6f7873ea7abbb0cfe))
+- Prevent changelog generation with pre-release builds ([1263d8a](https://github.com/enzoalbornoz/topf/commit/1263d8aac7410bef1ed6305252393c5f2e14be1e))
 ## [0.2.2] - 2026-04-01
 
 ### Bug Fixes
 
-- Use the skewed clock also for loaded secret bundles ([7b83ade](https://github.com/postfinance/topf/commit/7b83ade89e14fb57362d493dec8e07d4e832c7de))
+- Use the skewed clock also for loaded secret bundles ([7b83ade](https://github.com/enzoalbornoz/topf/commit/7b83ade89e14fb57362d493dec8e07d4e832c7de))
 
 ### Miscellaneous
 
-- Update changelog ([9be59c3](https://github.com/postfinance/topf/commit/9be59c352edf3f7e301e0640167466c95cdd9a9e))
+- Update changelog ([9be59c3](https://github.com/enzoalbornoz/topf/commit/9be59c352edf3f7e301e0640167466c95cdd9a9e))
 
 ### Build
 
-- Add 'install' task ([3138fb4](https://github.com/postfinance/topf/commit/3138fb466d59a06ebf5d14696cdf0391f5bc3a46))
+- Add 'install' task ([3138fb4](https://github.com/enzoalbornoz/topf/commit/3138fb466d59a06ebf5d14696cdf0391f5bc3a46))
 ## [0.2.1] - 2026-02-17
 
 ### Bug Fixes
 
-- Skew secret cert clock to past to handle time drift ([855755b](https://github.com/postfinance/topf/commit/855755b46f97633be37ae0dd700e23515bb4b52a))
-- **lint**: Resolve gosec log injection warning ([23eca64](https://github.com/postfinance/topf/commit/23eca6438a8a0a61994ec6594fa6da66efea5f6b))
+- Skew secret cert clock to past to handle time drift ([855755b](https://github.com/enzoalbornoz/topf/commit/855755b46f97633be37ae0dd700e23515bb4b52a))
+- **lint**: Resolve gosec log injection warning ([23eca64](https://github.com/enzoalbornoz/topf/commit/23eca6438a8a0a61994ec6594fa6da66efea5f6b))
 
 ### Miscellaneous
 
-- Update changelog ([6bedb54](https://github.com/postfinance/topf/commit/6bedb5426d28d9d0d5a44f646821f0c9d975b9df))
-- **ci**: Fix git-cliff warnings for merge commits ([952a107](https://github.com/postfinance/topf/commit/952a107a5f251a36658efa33248ac0353bb52086))
+- Update changelog ([6bedb54](https://github.com/enzoalbornoz/topf/commit/6bedb5426d28d9d0d5a44f646821f0c9d975b9df))
+- **ci**: Fix git-cliff warnings for merge commits ([952a107](https://github.com/enzoalbornoz/topf/commit/952a107a5f251a36658efa33248ac0353bb52086))
 
 ### Build
 
-- **deps**: Bump actions/setup-python from 5 to 6 ([afd3e79](https://github.com/postfinance/topf/commit/afd3e79c27131506d51fd6cf3aec2b8eb4235ece))
-- **deps**: Bump actions/checkout from 5 to 6 ([0501cbf](https://github.com/postfinance/topf/commit/0501cbffb236d3e77f32790c77464960e4608471))
-- **deps**: Bump actions/setup-go from 5 to 6 ([a54a89e](https://github.com/postfinance/topf/commit/a54a89eb799cd8db47576c58261f98b93b41054b))
-- **deps**: Bump golangci/golangci-lint-action from 8 to 9 ([36fd37a](https://github.com/postfinance/topf/commit/36fd37a247cd0ae5426c0ff9ad3ee3f76e013c8e))
-- **deps**: Bump actions/upload-pages-artifact from 3 to 4 ([c603e7c](https://github.com/postfinance/topf/commit/c603e7c6b5860871094170795f627164211f696a))
-- **deps**: Bump go.yaml.in/yaml/v4 from 4.0.0-rc.3 to 4.0.0-rc.4 ([c1e23c2](https://github.com/postfinance/topf/commit/c1e23c2dbcf0e0463105bc8d67a7ebb4e4dd74aa))
-- **deps**: Bump github.com/cosi-project/runtime from 1.13.0 to 1.14.0 ([2bffe91](https://github.com/postfinance/topf/commit/2bffe914d176e85318ac6da93bca3941dd196788))
+- **deps**: Bump actions/setup-python from 5 to 6 ([afd3e79](https://github.com/enzoalbornoz/topf/commit/afd3e79c27131506d51fd6cf3aec2b8eb4235ece))
+- **deps**: Bump actions/checkout from 5 to 6 ([0501cbf](https://github.com/enzoalbornoz/topf/commit/0501cbffb236d3e77f32790c77464960e4608471))
+- **deps**: Bump actions/setup-go from 5 to 6 ([a54a89e](https://github.com/enzoalbornoz/topf/commit/a54a89eb799cd8db47576c58261f98b93b41054b))
+- **deps**: Bump golangci/golangci-lint-action from 8 to 9 ([36fd37a](https://github.com/enzoalbornoz/topf/commit/36fd37a247cd0ae5426c0ff9ad3ee3f76e013c8e))
+- **deps**: Bump actions/upload-pages-artifact from 3 to 4 ([c603e7c](https://github.com/enzoalbornoz/topf/commit/c603e7c6b5860871094170795f627164211f696a))
+- **deps**: Bump go.yaml.in/yaml/v4 from 4.0.0-rc.3 to 4.0.0-rc.4 ([c1e23c2](https://github.com/enzoalbornoz/topf/commit/c1e23c2dbcf0e0463105bc8d67a7ebb4e4dd74aa))
+- **deps**: Bump github.com/cosi-project/runtime from 1.13.0 to 1.14.0 ([2bffe91](https://github.com/enzoalbornoz/topf/commit/2bffe914d176e85318ac6da93bca3941dd196788))
 ## [0.2.0] - 2026-02-13
 
 ### Features
 
-- **kubeconfig**: Make validity configurable via flag ([85e17b5](https://github.com/postfinance/topf/commit/85e17b58fc5bd21a4b2a802649462034c56f2b32))
-- **BREAKING**: Rename `patches` folder to `all` ([415b82d](https://github.com/postfinance/topf/commit/415b82d721e55d1a2ee9403315a3b2f9675e6a46))
-- **upgrade**: Make reboot mode configurable (#11) ([1d7f30e](https://github.com/postfinance/topf/commit/1d7f30e542a2d6df38e8e031098cdd18a61d0040))
+- **kubeconfig**: Make validity configurable via flag ([85e17b5](https://github.com/enzoalbornoz/topf/commit/85e17b58fc5bd21a4b2a802649462034c56f2b32))
+- **BREAKING**: Rename `patches` folder to `all` ([415b82d](https://github.com/enzoalbornoz/topf/commit/415b82d721e55d1a2ee9403315a3b2f9675e6a46))
+- **upgrade**: Make reboot mode configurable (#11) ([1d7f30e](https://github.com/enzoalbornoz/topf/commit/1d7f30e542a2d6df38e8e031098cdd18a61d0040))
 
 ### Bug Fixes
 
-- **apply**: Only throw warning when --auto-bootstrap has no CP nodes ([2891762](https://github.com/postfinance/topf/commit/289176224d6f83cb58ec173ed6fb8de7fa3a70a3))
+- **apply**: Only throw warning when --auto-bootstrap has no CP nodes ([2891762](https://github.com/enzoalbornoz/topf/commit/289176224d6f83cb58ec173ed6fb8de7fa3a70a3))
 
 ### Documentation
 
-- Add early stage disclaimer ([f25d7b4](https://github.com/postfinance/topf/commit/f25d7b47a474216f07db1ebde86c5a9ff2ca1c0c))
-- Topf schematic id and philosophy ([ed9f0b0](https://github.com/postfinance/topf/commit/ed9f0b0c099680d893ad75f8a1ca8bf000459e33))
-- Installer-image and upgrade improvements ([48ca530](https://github.com/postfinance/topf/commit/48ca530448412f7e16c9093ea50d54c2a5f9b6e0))
-- **readme**: Add demo link ([01e67b8](https://github.com/postfinance/topf/commit/01e67b8f15406275fc4344e5bc8729c51ce1ae1c))
-- **migration**: Precise secrets relocation ([e129b69](https://github.com/postfinance/topf/commit/e129b691f088ddcf7a17eb90a4ef119efeb2e8da))
-- **configuration-model**: Rm slash from role ([b875b9e](https://github.com/postfinance/topf/commit/b875b9e8a210cee3319f9cb6caca4589bbc03cfb))
-- **apply**: Add --dry-run flag ([97a9493](https://github.com/postfinance/topf/commit/97a94933ac121ad08b4452d52830113401d6084f))
+- Add early stage disclaimer ([f25d7b4](https://github.com/enzoalbornoz/topf/commit/f25d7b47a474216f07db1ebde86c5a9ff2ca1c0c))
+- Topf schematic id and philosophy ([ed9f0b0](https://github.com/enzoalbornoz/topf/commit/ed9f0b0c099680d893ad75f8a1ca8bf000459e33))
+- Installer-image and upgrade improvements ([48ca530](https://github.com/enzoalbornoz/topf/commit/48ca530448412f7e16c9093ea50d54c2a5f9b6e0))
+- **readme**: Add demo link ([01e67b8](https://github.com/enzoalbornoz/topf/commit/01e67b8f15406275fc4344e5bc8729c51ce1ae1c))
+- **migration**: Precise secrets relocation ([e129b69](https://github.com/enzoalbornoz/topf/commit/e129b691f088ddcf7a17eb90a4ef119efeb2e8da))
+- **configuration-model**: Rm slash from role ([b875b9e](https://github.com/enzoalbornoz/topf/commit/b875b9e8a210cee3319f9cb6caca4589bbc03cfb))
+- **apply**: Add --dry-run flag ([97a9493](https://github.com/enzoalbornoz/topf/commit/97a94933ac121ad08b4452d52830113401d6084f))
 
 ### Miscellaneous
 
-- **kubeconfig**: Use context in username ([50b9c7f](https://github.com/postfinance/topf/commit/50b9c7f50551e10aa49046d3ae7933af2bd54c4a))
-- Fix linter warning ([3b0992d](https://github.com/postfinance/topf/commit/3b0992da8b8c6b175c764a8540446b1c153c1517))
-- Don't gitignore cmd/topf folder ([d65e45d](https://github.com/postfinance/topf/commit/d65e45d19bdeddd12b0e21e479a174c9664ec98f))
-- **cliff**: Improve changelog and breaking changes visibility ([39f981a](https://github.com/postfinance/topf/commit/39f981a9da8fa312c646264961b0b881c04de058))
+- **kubeconfig**: Use context in username ([50b9c7f](https://github.com/enzoalbornoz/topf/commit/50b9c7f50551e10aa49046d3ae7933af2bd54c4a))
+- Fix linter warning ([3b0992d](https://github.com/enzoalbornoz/topf/commit/3b0992da8b8c6b175c764a8540446b1c153c1517))
+- Don't gitignore cmd/topf folder ([d65e45d](https://github.com/enzoalbornoz/topf/commit/d65e45d19bdeddd12b0e21e479a174c9664ec98f))
+- **cliff**: Improve changelog and breaking changes visibility ([39f981a](https://github.com/enzoalbornoz/topf/commit/39f981a9da8fa312c646264961b0b881c04de058))
 
 ### Build
 
-- Add dependabot.yml ([c2facce](https://github.com/postfinance/topf/commit/c2facce6853eec37dbdb8ee162daf07b045ee7ba))
-- **deps**: Update go to v1.26.0, talos to 1.12.4 and k8s to 1.35 ([c9d71a9](https://github.com/postfinance/topf/commit/c9d71a9cd9b9e9ca0f6c1395d4066634f376a809))
-- Add dev-release workflow ([3a017a7](https://github.com/postfinance/topf/commit/3a017a7a8a1d53e2a675e1b6a724812ed20dd9a3))
+- Add dependabot.yml ([c2facce](https://github.com/enzoalbornoz/topf/commit/c2facce6853eec37dbdb8ee162daf07b045ee7ba))
+- **deps**: Update go to v1.26.0, talos to 1.12.4 and k8s to 1.35 ([c9d71a9](https://github.com/enzoalbornoz/topf/commit/c9d71a9cd9b9e9ca0f6c1395d4066634f376a809))
+- Add dev-release workflow ([3a017a7](https://github.com/enzoalbornoz/topf/commit/3a017a7a8a1d53e2a675e1b6a724812ed20dd9a3))
 ## [0.1.3] - 2026-02-11
 
 ### Miscellaneous
 
-- Update changelog ([f605c93](https://github.com/postfinance/topf/commit/f605c9386a3a4a86ae2f84925e7e35ff0c04c142))
+- Update changelog ([f605c93](https://github.com/enzoalbornoz/topf/commit/f605c9386a3a4a86ae2f84925e7e35ff0c04c142))
 
 ### Build
 
-- **goreleaser**: 'v' prefix for container tags ([e5efd52](https://github.com/postfinance/topf/commit/e5efd526a63387dd8f5ffed8db0af3e4b91e0745))
+- **goreleaser**: 'v' prefix for container tags ([e5efd52](https://github.com/enzoalbornoz/topf/commit/e5efd526a63387dd8f5ffed8db0af3e4b91e0745))
 ## [0.1.2] - 2026-02-10
 
 ### Miscellaneous
 
-- Update changelog ([bf838b4](https://github.com/postfinance/topf/commit/bf838b498013b9d4c6751d726725c140fbd56332))
+- Update changelog ([bf838b4](https://github.com/enzoalbornoz/topf/commit/bf838b498013b9d4c6751d726725c140fbd56332))
 
 ### Build
 
-- **brew**: Remove quarantine flag on topf binary ([b0eb4d6](https://github.com/postfinance/topf/commit/b0eb4d696a98a2367ac198718a279009461ef59f))
+- **brew**: Remove quarantine flag on topf binary ([b0eb4d6](https://github.com/enzoalbornoz/topf/commit/b0eb4d696a98a2367ac198718a279009461ef59f))
 ## [0.1.1] - 2026-02-10
 
 ### Documentation
 
-- Create mkdocs documentation ([d87c57c](https://github.com/postfinance/topf/commit/d87c57c4ff4009f4a94a9e5c1ab1ae742cad5098))
+- Create mkdocs documentation ([d87c57c](https://github.com/enzoalbornoz/topf/commit/d87c57c4ff4009f4a94a9e5c1ab1ae742cad5098))
 
 ### Miscellaneous
 
-- Update changelog ([e6dee58](https://github.com/postfinance/topf/commit/e6dee58d305f767a476b06ed757b6639e3ed3df3))
+- Update changelog ([e6dee58](https://github.com/enzoalbornoz/topf/commit/e6dee58d305f767a476b06ed757b6639e3ed3df3))
 
 ### Build
 
-- Configure homebrew integration ([8a65146](https://github.com/postfinance/topf/commit/8a6514617b76e23ac5c43e90a4912c7df9587849))
+- Configure homebrew integration ([8a65146](https://github.com/enzoalbornoz/topf/commit/8a6514617b76e23ac5c43e90a4912c7df9587849))
 ## [0.1.0] - 2026-02-10
 
 ### Features
 
-- Add ability to add arbitrary data in topf.yaml for templating ([e2ca12f](https://github.com/postfinance/topf/commit/e2ca12f53298bbea08eb39dd8604101eea99e581))
-- **nodes**: Permit exporting the machineconfigs to a directory ([2051f9e](https://github.com/postfinance/topf/commit/2051f9ede8c308e870ba2a7865ec4df91ba6a66f))
-- **talosconfig**: Add all CP as endpoints and all nodes as nodes per default ([624b440](https://github.com/postfinance/topf/commit/624b440d659dd94d3701ef9f532fc2d63048bfc0))
-- **topf.yaml**: Decode SOPS-encrypted config and patches ([c07f126](https://github.com/postfinance/topf/commit/c07f1268d887841674d14f1d95a7891990b12920))
-- Merge apply and bootstrap cmds ([4cd174a](https://github.com/postfinance/topf/commit/4cd174a30522754d517d1f7fd979217ee4df8c13))
-- Add --confirm flag to reset command ([63b6ca9](https://github.com/postfinance/topf/commit/63b6ca98560eb765903aee2fb95241742256bab2))
-- Add --config flag for config patches directory ([7b6bb7b](https://github.com/postfinance/topf/commit/7b6bb7ba0a44107bfa926a2003317a990ca5edc7))
-- Add allow-not-ready flag ([98b0e62](https://github.com/postfinance/topf/commit/98b0e623bfbbf4f75a36af1b24d52af6bd34c599))
-- **bootstrap**: Check whether etcd is bootstrapped first ([8d6c03c](https://github.com/postfinance/topf/commit/8d6c03c16f2f7a981949524dc70ccd78c2930435))
-- Add dry-run mode for apply and upgrade ([4f4d1b6](https://github.com/postfinance/topf/commit/4f4d1b610d5f8ff964cd4485bf70935c83bbfe79))
+- Add ability to add arbitrary data in topf.yaml for templating ([e2ca12f](https://github.com/enzoalbornoz/topf/commit/e2ca12f53298bbea08eb39dd8604101eea99e581))
+- **nodes**: Permit exporting the machineconfigs to a directory ([2051f9e](https://github.com/enzoalbornoz/topf/commit/2051f9ede8c308e870ba2a7865ec4df91ba6a66f))
+- **talosconfig**: Add all CP as endpoints and all nodes as nodes per default ([624b440](https://github.com/enzoalbornoz/topf/commit/624b440d659dd94d3701ef9f532fc2d63048bfc0))
+- **topf.yaml**: Decode SOPS-encrypted config and patches ([c07f126](https://github.com/enzoalbornoz/topf/commit/c07f1268d887841674d14f1d95a7891990b12920))
+- Merge apply and bootstrap cmds ([4cd174a](https://github.com/enzoalbornoz/topf/commit/4cd174a30522754d517d1f7fd979217ee4df8c13))
+- Add --confirm flag to reset command ([63b6ca9](https://github.com/enzoalbornoz/topf/commit/63b6ca98560eb765903aee2fb95241742256bab2))
+- Add --config flag for config patches directory ([7b6bb7b](https://github.com/enzoalbornoz/topf/commit/7b6bb7ba0a44107bfa926a2003317a990ca5edc7))
+- Add allow-not-ready flag ([98b0e62](https://github.com/enzoalbornoz/topf/commit/98b0e623bfbbf4f75a36af1b24d52af6bd34c599))
+- **bootstrap**: Check whether etcd is bootstrapped first ([8d6c03c](https://github.com/enzoalbornoz/topf/commit/8d6c03c16f2f7a981949524dc70ccd78c2930435))
+- Add dry-run mode for apply and upgrade ([4f4d1b6](https://github.com/enzoalbornoz/topf/commit/4f4d1b610d5f8ff964cd4485bf70935c83bbfe79))
 
 ### Bug Fixes
 
-- **nodes**: Output error message correctly with -o yaml ([e6e66fb](https://github.com/postfinance/topf/commit/e6e66fb87c1c0081ff5646e2c83462317c2ef84d))
-- **config**: Also filter topf.yaml:nodes entries with the regexp ([313b4a4](https://github.com/postfinance/topf/commit/313b4a4c4b3aaeef5fb59d04b7caf9cd3789536b))
-- **patch**: Issue an error for missing keys and apply patches based on role ([a958763](https://github.com/postfinance/topf/commit/a958763d8a93a6645a55a047ffc6e1a4ed5ffb52))
-- Log proper result and warn about extraneous args ([f5bd40e](https://github.com/postfinance/topf/commit/f5bd40e447a6eb0e8dda30ba7a8505d231af1b83))
-- Prevent access nil pointer and use node getters ([3f9dffe](https://github.com/postfinance/topf/commit/3f9dffeb7db15fd562cdd047b6a8782f21e53742))
-- Skip empty patches instead of aborting ([1d0caa5](https://github.com/postfinance/topf/commit/1d0caa58cba2216077e3bf0b2207acf3052a0651))
-- **bootstrap**: Check etcd service state instead of counting members ([24d8089](https://github.com/postfinance/topf/commit/24d80890c6bc2a8698e60164a9a01ca4c5fa24d0))
-- Use go/yaml/v4 in secrets.go ([7e7a5b4](https://github.com/postfinance/topf/commit/7e7a5b4306f752228dc024e08fdb567bd0f2948b))
-- Add validation when retrieving secrets ([bbdf93d](https://github.com/postfinance/topf/commit/bbdf93d297323a48859c98a09612fe78f58b7ab2))
+- **nodes**: Output error message correctly with -o yaml ([e6e66fb](https://github.com/enzoalbornoz/topf/commit/e6e66fb87c1c0081ff5646e2c83462317c2ef84d))
+- **config**: Also filter topf.yaml:nodes entries with the regexp ([313b4a4](https://github.com/enzoalbornoz/topf/commit/313b4a4c4b3aaeef5fb59d04b7caf9cd3789536b))
+- **patch**: Issue an error for missing keys and apply patches based on role ([a958763](https://github.com/enzoalbornoz/topf/commit/a958763d8a93a6645a55a047ffc6e1a4ed5ffb52))
+- Log proper result and warn about extraneous args ([f5bd40e](https://github.com/enzoalbornoz/topf/commit/f5bd40e447a6eb0e8dda30ba7a8505d231af1b83))
+- Prevent access nil pointer and use node getters ([3f9dffe](https://github.com/enzoalbornoz/topf/commit/3f9dffeb7db15fd562cdd047b6a8782f21e53742))
+- Skip empty patches instead of aborting ([1d0caa5](https://github.com/enzoalbornoz/topf/commit/1d0caa58cba2216077e3bf0b2207acf3052a0651))
+- **bootstrap**: Check etcd service state instead of counting members ([24d8089](https://github.com/enzoalbornoz/topf/commit/24d80890c6bc2a8698e60164a9a01ca4c5fa24d0))
+- Use go/yaml/v4 in secrets.go ([7e7a5b4](https://github.com/enzoalbornoz/topf/commit/7e7a5b4306f752228dc024e08fdb567bd0f2948b))
+- Add validation when retrieving secrets ([bbdf93d](https://github.com/enzoalbornoz/topf/commit/bbdf93d297323a48859c98a09612fe78f58b7ab2))
 
 ### Documentation
 
-- Update readme with combined bootstrap/apply command ([3c44395](https://github.com/postfinance/topf/commit/3c44395706f806e6711a710d35c16d7857d77e68))
-- Update README.md ([b7b26fd](https://github.com/postfinance/topf/commit/b7b26fdda90fe3cbb6044d1b799848f622f9455e))
-- Add 'Alternatives' section at the end of the readme ([7e5b8cd](https://github.com/postfinance/topf/commit/7e5b8cd31bf9f4d896c0349725244f6fdedfeb72))
-- Use git-cliff for changelog ([6a5416d](https://github.com/postfinance/topf/commit/6a5416d0a15499acb910bfdc49039c4f2464733e))
+- Update readme with combined bootstrap/apply command ([3c44395](https://github.com/enzoalbornoz/topf/commit/3c44395706f806e6711a710d35c16d7857d77e68))
+- Update README.md ([b7b26fd](https://github.com/enzoalbornoz/topf/commit/b7b26fdda90fe3cbb6044d1b799848f622f9455e))
+- Add 'Alternatives' section at the end of the readme ([7e5b8cd](https://github.com/enzoalbornoz/topf/commit/7e5b8cd31bf9f4d896c0349725244f6fdedfeb72))
+- Use git-cliff for changelog ([6a5416d](https://github.com/enzoalbornoz/topf/commit/6a5416d0a15499acb910bfdc49039c4f2464733e))
 
 ### Miscellaneous
 
-- Fail early if a patch is considered JSON patch ([1ab45ee](https://github.com/postfinance/topf/commit/1ab45eeba0b152e9c7d676617115d9c1259c34fc))
-- Move sops decryption function to utils/ ([ed9963a](https://github.com/postfinance/topf/commit/ed9963a5d7d02901312e9163f20b716389fb121e))
-- Add node.Attrs() function for simpler logging ([483331d](https://github.com/postfinance/topf/commit/483331d1794130ab1675ce0777a4a0a0a23f15b9))
-- Validate config-dir argument ([29b409b](https://github.com/postfinance/topf/commit/29b409bf8cc1fb8b61f012da6675b48e44aade4b))
-- Move config-dir to topf.yaml ([3ccdc10](https://github.com/postfinance/topf/commit/3ccdc109b397864535cb2f4a69b60ce71381d812))
-- Rename nodes to nodes-filter ([ad90a46](https://github.com/postfinance/topf/commit/ad90a461a554036652461f62ac9aabbb3e310392))
-- **bootstrap**: Improve logging ([cb1db05](https://github.com/postfinance/topf/commit/cb1db05c41ee11f2a37a7d467b1021bf2d1376f4))
-- Add SPDX license ([861149b](https://github.com/postfinance/topf/commit/861149b39a9bbd0cc34b03cd49d774dfa7668e11))
+- Fail early if a patch is considered JSON patch ([1ab45ee](https://github.com/enzoalbornoz/topf/commit/1ab45eeba0b152e9c7d676617115d9c1259c34fc))
+- Move sops decryption function to utils/ ([ed9963a](https://github.com/enzoalbornoz/topf/commit/ed9963a5d7d02901312e9163f20b716389fb121e))
+- Add node.Attrs() function for simpler logging ([483331d](https://github.com/enzoalbornoz/topf/commit/483331d1794130ab1675ce0777a4a0a0a23f15b9))
+- Validate config-dir argument ([29b409b](https://github.com/enzoalbornoz/topf/commit/29b409bf8cc1fb8b61f012da6675b48e44aade4b))
+- Move config-dir to topf.yaml ([3ccdc10](https://github.com/enzoalbornoz/topf/commit/3ccdc109b397864535cb2f4a69b60ce71381d812))
+- Rename nodes to nodes-filter ([ad90a46](https://github.com/enzoalbornoz/topf/commit/ad90a461a554036652461f62ac9aabbb3e310392))
+- **bootstrap**: Improve logging ([cb1db05](https://github.com/enzoalbornoz/topf/commit/cb1db05c41ee11f2a37a7d467b1021bf2d1376f4))
+- Add SPDX license ([861149b](https://github.com/enzoalbornoz/topf/commit/861149b39a9bbd0cc34b03cd49d774dfa7668e11))
 
 ### Build
 
-- Add version flag ([266ccbd](https://github.com/postfinance/topf/commit/266ccbd973f6869f65953946ae591f7a26acb1e9))
-- Dependencies upgrade ([88e9bb8](https://github.com/postfinance/topf/commit/88e9bb8baac47f09b63fb2c2369c0a8977d36a4e))
-- Refactor NewTopfRuntime to use a struct ([83c8323](https://github.com/postfinance/topf/commit/83c832305408d23171dbd7dff9fa6495af57816d))
-- Add goreleaser workflow ([1343686](https://github.com/postfinance/topf/commit/134368618feb480f49c4896ac2e15d41e51dbd57))
+- Add version flag ([266ccbd](https://github.com/enzoalbornoz/topf/commit/266ccbd973f6869f65953946ae591f7a26acb1e9))
+- Dependencies upgrade ([88e9bb8](https://github.com/enzoalbornoz/topf/commit/88e9bb8baac47f09b63fb2c2369c0a8977d36a4e))
+- Refactor NewTopfRuntime to use a struct ([83c8323](https://github.com/enzoalbornoz/topf/commit/83c832305408d23171dbd7dff9fa6495af57816d))
+- Add goreleaser workflow ([1343686](https://github.com/enzoalbornoz/topf/commit/134368618feb480f49c4896ac2e15d41e51dbd57))

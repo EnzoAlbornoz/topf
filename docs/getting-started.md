@@ -19,12 +19,12 @@ brew install postfinance/tap/topf
 ### Go Install
 
 ```bash
-go install github.com/postfinance/topf/cmd/topf@latest
+go install github.com/enzoalbornoz/topf/cmd/topf@latest
 ```
 
 ### Binary Download
 
-Download the latest binary from [GitHub Releases](https://github.com/postfinance/topf/releases/latest).
+Download the latest binary from [GitHub Releases](https://github.com/enzoalbornoz/topf/releases/latest).
 
 ### Container Image
 

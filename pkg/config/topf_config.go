@@ -10,8 +10,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/postfinance/topf/internal/decryption"
-	"github.com/postfinance/topf/pkg/providers"
+	"github.com/enzoalbornoz/topf/internal/decryption"
+	"github.com/enzoalbornoz/topf/pkg/providers"
 	"go.yaml.in/yaml/v4"
 )
 

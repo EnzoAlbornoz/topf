@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/postfinance/topf/internal/interactive"
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/interactive"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	"github.com/siderolabs/talos/pkg/machinery/resources/runtime"
 )

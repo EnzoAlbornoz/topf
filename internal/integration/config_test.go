@@ -11,9 +11,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/postfinance/topf/internal/cmd/apply"
-	"github.com/postfinance/topf/internal/cmd/kubeconfig"
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/cmd/apply"
+	"github.com/enzoalbornoz/topf/internal/cmd/kubeconfig"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/siderolabs/go-retry/retry"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

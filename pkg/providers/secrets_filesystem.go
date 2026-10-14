@@ -9,7 +9,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/postfinance/topf/internal/decryption"
+	"github.com/enzoalbornoz/topf/internal/decryption"
 )
 
 // NewFilesystemSecretsProvider returns a SecretsProvider that reads and writes

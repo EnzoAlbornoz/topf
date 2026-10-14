@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/postfinance/topf/internal/cmd/talosconfig"
+	"github.com/enzoalbornoz/topf/internal/cmd/talosconfig"
 	"github.com/urfave/cli/v3"
 )
 

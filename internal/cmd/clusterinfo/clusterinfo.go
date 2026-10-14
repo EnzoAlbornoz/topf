@@ -7,8 +7,8 @@ package clusterinfo
 import (
 	"encoding/base64"
 
-	"github.com/postfinance/topf/internal/topf"
-	"github.com/postfinance/topf/pkg/clusterinfo"
+	"github.com/enzoalbornoz/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/pkg/clusterinfo"
 )
 
 // Get returns the full non-sensitive information about the talos cluster configuration

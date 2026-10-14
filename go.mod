@@ -1,4 +1,4 @@
-module github.com/postfinance/topf
+module github.com/enzoalbornoz/topf
 
 go 1.27.0
 

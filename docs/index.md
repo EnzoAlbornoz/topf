@@ -7,13 +7,13 @@
 </p>
 
 [![Go Version](https://img.shields.io/github/go-mod/go-version/postfinance/topf)](https://go.dev/)
-[![License](https://img.shields.io/github/license/postfinance/topf)](https://github.com/postfinance/topf/blob/main/LICENSE)
-[![Go Report Card](https://goreportcard.com/badge/github.com/postfinance/topf)](https://goreportcard.com/report/github.com/postfinance/topf)
-[![Latest Release](https://img.shields.io/github/v/release/postfinance/topf)](https://github.com/postfinance/topf/releases/latest)
+[![License](https://img.shields.io/github/license/postfinance/topf)](https://github.com/enzoalbornoz/topf/blob/main/LICENSE)
+[![Go Report Card](https://goreportcard.com/badge/github.com/enzoalbornoz/topf)](https://goreportcard.com/report/github.com/enzoalbornoz/topf)
+[![Latest Release](https://img.shields.io/github/v/release/postfinance/topf)](https://github.com/enzoalbornoz/topf/releases/latest)
 
 TOPF is managing [Talos](https://www.talos.dev/) based Kubernetes clusters. It provides functionality for bootstrapping new clusters, resetting existing ones, and applying configuration changes.
 
-Feedback and contributions are welcome — see [Contributing](contributing.md) for development setup and conventions, and please open an [issue](https://github.com/postfinance/topf/issues) if you run into problems or have suggestions.
+Feedback and contributions are welcome — see [Contributing](contributing.md) for development setup and conventions, and please open an [issue](https://github.com/enzoalbornoz/topf/issues) if you run into problems or have suggestions.
 
 [Get Started](getting-started.md){ .md-button .md-button--primary }
 

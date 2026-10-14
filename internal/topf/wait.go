@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/cosi-project/runtime/pkg/safe"
-	"github.com/postfinance/topf/internal/progress"
+	"github.com/enzoalbornoz/topf/internal/progress"
 	"github.com/siderolabs/go-retry/retry"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	"github.com/siderolabs/talos/pkg/machinery/client"

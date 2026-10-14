@@ -16,10 +16,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/postfinance/topf/internal/decryption"
-	"github.com/postfinance/topf/internal/maskedwriter"
-	"github.com/postfinance/topf/internal/schematic"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/internal/decryption"
+	"github.com/enzoalbornoz/topf/internal/maskedwriter"
+	"github.com/enzoalbornoz/topf/internal/schematic"
+	"github.com/enzoalbornoz/topf/pkg/config"
 	"github.com/siderolabs/talos/pkg/machinery/client"
 	"github.com/siderolabs/talos/pkg/machinery/config/generate/secrets"
 )

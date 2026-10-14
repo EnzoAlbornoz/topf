@@ -13,7 +13,7 @@ import (
 	"log/slog"
 	"os"
 
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/stretchr/testify/suite"
 )
 

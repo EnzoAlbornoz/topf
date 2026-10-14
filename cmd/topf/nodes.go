@@ -9,8 +9,8 @@ import (
 	"os"
 	"strings"
 
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/jedib0t/go-pretty/v6/table"
-	"github.com/postfinance/topf/internal/topf"
 	"github.com/urfave/cli/v3"
 	"go.yaml.in/yaml/v4"
 )

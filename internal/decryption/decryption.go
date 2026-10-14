@@ -11,8 +11,8 @@ import (
 	"io/fs"
 	"os"
 
-	"github.com/postfinance/topf/internal/sops"
-	"github.com/postfinance/topf/internal/vals"
+	"github.com/enzoalbornoz/topf/internal/sops"
+	"github.com/enzoalbornoz/topf/internal/vals"
 )
 
 // ReadFileWithSecrets reads a file, automatically decrypts it with SOPS and vals.

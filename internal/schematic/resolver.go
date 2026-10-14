@@ -16,7 +16,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/pkg/config"
 	factoryclient "github.com/siderolabs/image-factory/pkg/client"
 	"github.com/siderolabs/image-factory/pkg/schematic"
 	"golang.org/x/sync/singleflight"

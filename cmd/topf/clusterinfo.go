@@ -7,7 +7,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/postfinance/topf/internal/cmd/clusterinfo"
+	"github.com/enzoalbornoz/topf/internal/cmd/clusterinfo"
 	"github.com/urfave/cli/v3"
 	"go.yaml.in/yaml/v4"
 )

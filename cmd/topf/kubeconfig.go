@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/postfinance/topf/internal/cmd/kubeconfig"
+	"github.com/enzoalbornoz/topf/internal/cmd/kubeconfig"
 	"github.com/urfave/cli/v3"
 	"k8s.io/client-go/tools/clientcmd"
 )

@@ -15,7 +15,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/pkg/config"
 )
 
 func testFactory(srv *httptest.Server) string {

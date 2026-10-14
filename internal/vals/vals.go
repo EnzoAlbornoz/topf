@@ -14,7 +14,7 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/postfinance/topf/internal/yamlutils"
+	"github.com/enzoalbornoz/topf/internal/yamlutils"
 	"gopkg.in/yaml.v3"
 )
 

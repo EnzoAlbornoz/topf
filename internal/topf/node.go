@@ -9,7 +9,7 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/pkg/config"
 	"github.com/siderolabs/talos/pkg/images"
 	talosconfig "github.com/siderolabs/talos/pkg/machinery/config"
 	"github.com/siderolabs/talos/pkg/machinery/config/bundle"

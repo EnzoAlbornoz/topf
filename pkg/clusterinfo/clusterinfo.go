@@ -4,7 +4,7 @@
 // Package clusterinfo contains the output type of the clusterinfo command
 package clusterinfo
 
-import "github.com/postfinance/topf/pkg/config"
+import "github.com/enzoalbornoz/topf/pkg/config"
 
 // ClusterInfo contains the general config of the cluster along with certificate material of the components
 type ClusterInfo struct {

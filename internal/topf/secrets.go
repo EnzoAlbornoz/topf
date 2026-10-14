@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/postfinance/topf/internal/interactive"
-	"github.com/postfinance/topf/pkg/providers"
+	"github.com/enzoalbornoz/topf/internal/interactive"
+	"github.com/enzoalbornoz/topf/pkg/providers"
 	"github.com/siderolabs/talos/pkg/machinery/config/generate/secrets"
 	"go.yaml.in/yaml/v4"
 )

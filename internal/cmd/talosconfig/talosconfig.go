@@ -9,8 +9,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/postfinance/topf/internal/topf"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/pkg/config"
 	"github.com/siderolabs/talos/pkg/machinery/config/bundle"
 	"github.com/siderolabs/talos/pkg/machinery/config/generate"
 	"github.com/siderolabs/talos/pkg/machinery/constants"

@@ -1,6 +1,6 @@
 # AI Skills
 
-TOPF ships a set of **skills** — prompt-level workflows that guide an AI coding agent (Claude, opencode, etc.) through complex, multi-step tasks involving TOPF and Talos configuration. They live in the [`skills/`](https://github.com/postfinance/topf/tree/main/skills) directory of the repository and can be loaded by any agent that supports the skill format.
+TOPF ships a set of **skills** — prompt-level workflows that guide an AI coding agent (Claude, opencode, etc.) through complex, multi-step tasks involving TOPF and Talos configuration. They live in the [`skills/`](https://github.com/enzoalbornoz/topf/tree/main/skills) directory of the repository and can be loaded by any agent that supports the skill format.
 
 ## What is a skill?
 
@@ -10,8 +10,8 @@ A skill is a Markdown file (`SKILL.md`) plus optional reference material that an
 
 | Skill | Purpose |
 | ----- | ------- |
-| [`migrate-talhelper-to-topf`](https://github.com/postfinance/topf/tree/main/skills/migrate-talhelper-to-topf) | Migrate a cluster from talhelper (now archived) to TOPF: convert `talconfig.yaml` to `topf.yaml` + patch files, rewrite JSON patches as strategic merge, move envsubst/talenv values into SOPS-encrypted `data` + Go templates. |
-| [`talos-v114-migration`](https://github.com/postfinance/topf/tree/main/skills/talos-v114-migration) | Migrate Talos config patches from the v1.13 (or earlier) single-document v1alpha1 format to the v1.14 multi-document config format (dedicated kinds like `KubeletConfig`, `VolumeConfig`, `KubeNodeConfig`, …). |
+| [`migrate-talhelper-to-topf`](https://github.com/enzoalbornoz/topf/tree/main/skills/migrate-talhelper-to-topf) | Migrate a cluster from talhelper (now archived) to TOPF: convert `talconfig.yaml` to `topf.yaml` + patch files, rewrite JSON patches as strategic merge, move envsubst/talenv values into SOPS-encrypted `data` + Go templates. |
+| [`talos-v114-migration`](https://github.com/enzoalbornoz/topf/tree/main/skills/talos-v114-migration) | Migrate Talos config patches from the v1.13 (or earlier) single-document v1alpha1 format to the v1.14 multi-document config format (dedicated kinds like `KubeletConfig`, `VolumeConfig`, `KubeNodeConfig`, …). |
 
 ## How to use a skill
 
@@ -38,4 +38,4 @@ You can also just read the `SKILL.md` file directly and follow the workflow your
     - the [upstream migration guide](migration-from-talhelper.md)
 
     If you spot an error in a skill, please open an
-    [issue](https://github.com/postfinance/topf/issues) or a pull request.
+    [issue](https://github.com/enzoalbornoz/topf/issues) or a pull request.

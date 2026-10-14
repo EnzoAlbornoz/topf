@@ -10,8 +10,8 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/postfinance/topf/internal/diffcolor"
-	"github.com/postfinance/topf/internal/interactive"
+	"github.com/enzoalbornoz/topf/internal/diffcolor"
+	"github.com/enzoalbornoz/topf/internal/interactive"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	"github.com/siderolabs/talos/pkg/machinery/config/encoder"
 )

@@ -16,9 +16,9 @@ import (
 
 	"github.com/mattn/go-isatty"
 
-	"github.com/postfinance/topf/internal/cmd/apply"
-	"github.com/postfinance/topf/internal/nodepool"
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/cmd/apply"
+	"github.com/enzoalbornoz/topf/internal/nodepool"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	"github.com/siderolabs/talos/pkg/machinery/api/machine"
 	"github.com/urfave/cli/v3"
 )

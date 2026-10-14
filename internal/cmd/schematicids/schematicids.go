@@ -11,8 +11,8 @@ import (
 	"io"
 	"sort"
 
-	"github.com/postfinance/topf/internal/topf"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/pkg/config"
 )
 
 // Execute resolves all schematic IDs for the configured nodes and prints

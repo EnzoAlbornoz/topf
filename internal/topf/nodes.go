@@ -13,7 +13,7 @@ import (
 
 	"github.com/cosi-project/runtime/pkg/resource"
 	"github.com/cosi-project/runtime/pkg/safe"
-	"github.com/postfinance/topf/pkg/config"
+	"github.com/enzoalbornoz/topf/pkg/config"
 	"github.com/siderolabs/talos/pkg/machinery/cel"
 	"github.com/siderolabs/talos/pkg/machinery/cel/celenv"
 	talosconfig "github.com/siderolabs/talos/pkg/machinery/config"

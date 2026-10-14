@@ -11,7 +11,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/postfinance/topf/internal/topf"
+	"github.com/enzoalbornoz/topf/internal/topf"
 	talosversion "github.com/siderolabs/talos/pkg/machinery/version"
 	"github.com/urfave/cli/v3"
 )

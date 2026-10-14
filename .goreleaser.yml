@@ -46,7 +46,7 @@ homebrew_casks:
       owner: postfinance
       name: homebrew-tap
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
-    homepage: https://github.com/postfinance/topf
+    homepage: https://github.com/enzoalbornoz/topf
     description: Talos Orchestrator by PostFinance
     hooks:
       post:
