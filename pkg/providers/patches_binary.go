@@ -4,6 +4,7 @@
 package providers
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 	"os"
@@ -23,7 +24,8 @@ type binaryPatches struct {
 
 func (p *binaryPatches) GetPatches(ctx context.Context, patchContext []byte) ([]byte, error) {
 	//nolint:gosec // launching arbitrary binary is part of the design
-	cmd := exec.CommandContext(ctx, p.binaryPath, "patches", string(patchContext))
+	cmd := exec.CommandContext(ctx, p.binaryPath, "patches")
+	cmd.Stdin = bytes.NewReader(patchContext)
 	cmd.Stderr = os.Stderr
 
 	output, err := cmd.Output()

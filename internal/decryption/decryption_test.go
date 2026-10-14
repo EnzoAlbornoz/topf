@@ -42,3 +42,18 @@ func TestReadFile(t *testing.T) {
 		}
 	})
 }
+
+func TestDecryptContent(t *testing.T) {
+	t.Run("plain content returns content without secrets", func(t *testing.T) {
+		content, secrets, err := DecryptContent([]byte("foo: bar\n"))
+		if err != nil {
+			t.Fatalf("unexpected error: %v", err)
+		}
+		if string(content) != "foo: bar\n" {
+			t.Errorf("unexpected content: %q", string(content))
+		}
+		if len(secrets) != 0 {
+			t.Errorf("expected no secrets, got %v", secrets)
+		}
+	})
+}

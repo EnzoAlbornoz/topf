@@ -23,9 +23,9 @@ func writeProviderScript(t *testing.T, script string) string {
 }
 
 func TestBinaryPatchesProvider(t *testing.T) {
-	t.Run("passesPatchContextAsArgument", func(t *testing.T) {
-		// prints the number of arguments followed by each argument on its own line
-		provider := NewBinaryPatchesProvider(writeProviderScript(t, `printf '%s\n' "$#" "$@"`))
+	t.Run("passesPatchContextOnStdin", func(t *testing.T) {
+		// prints the number of arguments, each argument on its own line and then stdin
+		provider := NewBinaryPatchesProvider(writeProviderScript(t, `printf '%s\n' "$#" "$@"; cat`))
 
 		patchContext := `{"ClusterName": "my cluster", "Data": {"quote": "\"it's\""}}`
 
@@ -34,9 +34,9 @@ func TestBinaryPatchesProvider(t *testing.T) {
 			t.Fatal(err)
 		}
 
-		want := "2\npatches\n" + patchContext + "\n"
+		want := "1\npatches\n" + patchContext
 		if string(output) != want {
-			t.Errorf("unexpected arguments: got %q, want %q", output, want)
+			t.Errorf("unexpected invocation: got %q, want %q", output, want)
 		}
 	})
 

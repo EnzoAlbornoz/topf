@@ -59,10 +59,10 @@ By default, patches are read from the [patches directory](configuration-model.md
 The binary is invoked as:
 
 ```bash
-<binary> patches <patchContext>
+<binary> patches
 ```
 
-`<patchContext>` is a single argument holding the JSON serialization of the same data available to [patch templates](configuration-model.md#templating). Keys match the template field names, so `.Node.Data.uuid` in a template is `.Node.Data.uuid` in the JSON:
+The patch context of the node is passed as JSON via **stdin**. It holds the same data available to [patch templates](configuration-model.md#templating), and keys match the template field names, so `.Node.Data.uuid` in a template is `.Node.Data.uuid` in the JSON:
 
 ```json
 {
@@ -108,7 +108,7 @@ hostname: node1
 ```
 
 - Exit code `0` on success, non-zero on failure. A failure aborts config generation for that node
-- **stderr** is passed through to the user for diagnostics
+- **stderr** is passed through to the user for diagnostics, without [redaction](configuration.md#redacting-sensitive-output)
 - Empty output means there are no additional patches for the node
 - The binary is executed concurrently for all processed nodes
 
@@ -118,7 +118,7 @@ A minimal provider written in bash with [jq](https://jqlang.org/):
 #!/usr/bin/env bash
 set -euo pipefail
 
-host=$(jq -r '.Node.Host' <<<"$2")
+host=$(jq -r '.Node.Host')
 
 cat <<EOF
 apiVersion: v1alpha1
@@ -128,8 +128,25 @@ hostname: ${host}
 EOF
 ```
 
-!!! warning
-    The patch context is passed as a command-line argument, which other users on the same machine may be able to read (e.g. with `ps`). This includes `data` values from `topf.yaml` that were decrypted with SOPS or resolved through vals. Operating systems also limit the argument length (128 KiB for a single argument on Linux, 32 KiB for the whole command line on Windows).
+### Secret Resolution
+
+The output goes through the same [secret resolution](configuration-model.md#secret-resolution) pipeline as patch files:
+
+1. **SOPS decryption** — if the output is a SOPS-encrypted YAML document, it is decrypted with the `sops` binary
+1. **vals evaluation** — [vals](https://github.com/helmfile/vals) references (e.g. `ref+vault://`) are resolved with the `vals` binary
+
+Values decrypted or resolved this way are [redacted](configuration.md#redacting-sensitive-output) from TOPF's output, so return secrets as vals references or SOPS-encrypted rather than in plaintext:
+
+```yaml
+apiVersion: v1alpha1
+kind: RegistryAuthConfig
+name: ghcr.io
+username: ci
+password: ref+vault://secret/registry/ghcr#/password
+```
+
+!!! note
+    SOPS decrypts the output as a single file, so it can't be the concatenation of several SOPS-encrypted files. To use secrets from several SOPS files, reference them with `ref+sops://` instead.
 
 ### Merge Order
 

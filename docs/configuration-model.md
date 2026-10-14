@@ -53,7 +53,7 @@ Empty patches (comments only, whitespace, `{}`, `[]`, `null`) are automatically 
 
 ## Secret Resolution
 
-TOPF reads all non-template files (including `topf.yaml` itself) through a two-stage pipeline:
+TOPF reads all non-template files (including `topf.yaml` itself) and the output of the [patches provider](providers.md#secret-resolution) through a two-stage pipeline:
 
 1. **SOPS decryption** — if a file is SOPS-encrypted, it is decrypted automatically. If SOPS is not installed, unencrypted files are read as-is.
 1. **vals evaluation** — after decryption, any [vals](https://github.com/helmfile/vals) references (e.g. `ref+vault://`, `ref+file://`) are resolved. If no vals references are present, this step is skipped. The `vals` binary must be on `PATH` when vals references are used.
