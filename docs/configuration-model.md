@@ -6,10 +6,10 @@ The final machine configuration for each node is assembled from a series of conf
 
 Patches are applied in the following order:
 
+1. **patches provider** — patches generated for that specific node by the [patches provider](providers.md#patches-provider) binary, if `patchesProvider` is configured
 1. **`all/`** — applied to all nodes
 1. **`<role>/`** — applied to nodes matching the role (`control-plane` or `worker`)
 1. **`node/<host>/`** — applied only to that specific node
-1. **patches provider** — patches generated for that specific node by the [patches provider](providers.md#patches-provider) binary, if `patchesProvider` is configured
 
 !!! tip
     The per-host directory is `node/` (singular), not `nodes/` as each `<host>/` subfolder targets a single node at a time.

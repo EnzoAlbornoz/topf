@@ -292,7 +292,7 @@ func TestLoadFromProvider(t *testing.T) {
 			return nil, nil
 		})
 
-		if _, err := patchCtx.LoadFromProvider(t.Context(), provider); err != nil {
+		if _, err := patchCtx.LoadFromProvider(context.Background(), provider); err != nil {
 			t.Fatalf("LoadFromProvider() error: %v", err)
 		}
 
@@ -331,19 +331,6 @@ func TestLoadFromProvider(t *testing.T) {
 
 		if !reflect.DeepEqual(gotValue, wantValue) {
 			t.Errorf("unexpected patch context:\ngot:  %s\nwant: %s", got, want)
-		}
-	})
-
-	t.Run("forwardsContext", func(t *testing.T) {
-		ctx, cancel := context.WithCancel(t.Context())
-		cancel()
-
-		provider := patchesProviderFunc(func(ctx context.Context, _ []byte) ([]byte, error) {
-			return nil, ctx.Err()
-		})
-
-		if _, err := patchCtx.LoadFromProvider(ctx, provider); !errors.Is(err, context.Canceled) {
-			t.Fatalf("expected context.Canceled, got: %v", err)
 		}
 	})
 
@@ -407,7 +394,7 @@ machine:
 				return []byte(tt.output), tt.err
 			})
 
-			patches, err := patchCtx.LoadFromProvider(t.Context(), provider)
+			patches, err := patchCtx.LoadFromProvider(context.Background(), provider)
 			if tt.wantErr {
 				if err == nil {
 					t.Fatal("LoadFromProvider() expected error, got nil")

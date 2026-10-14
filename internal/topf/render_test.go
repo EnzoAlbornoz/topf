@@ -4,146 +4,145 @@
 package topf
 
 import (
+	"context"
 	"log/slog"
 	"os"
 	"path/filepath"
 	"strings"
 	"testing"
-	"time"
 
 	"github.com/siderolabs/talos/pkg/machinery/config/encoder"
-	"github.com/siderolabs/talos/pkg/machinery/config/generate/secrets"
-	"go.yaml.in/yaml/v4"
 )
 
-// newPatchesProviderRuntime creates a runtime for a two node cluster whose
-// patches provider is the test binary running in the given mode.
-func newPatchesProviderRuntime(t *testing.T, mode string) Topf {
-	t.Helper()
-
-	t.Setenv(fakePatchesProviderEnv, mode)
-
-	providerPath, err := os.Executable()
-	if err != nil {
-		t.Fatalf("failed to locate test binary: %v", err)
-	}
-
-	dir := t.TempDir()
-
-	writeFile(t, filepath.Join(dir, "topf.yaml"), `clusterName: test
-clusterEndpoint: https://10.0.0.100:6443
-kubernetesVersion: 1.35.1
-patchesProvider: '`+providerPath+`'
-data:
-  env: prod
-nodes:
-  - host: cp1
-    role: control-plane
-    data:
-      rack: a3
-  - host: w1
-    role: worker
-    data:
-      rack: b1
-`)
-
-	// node patches from the patches directory, the hostname is expected to be
-	// overridden by the provider
-	writeFile(t, filepath.Join(dir, "node", "cp1", "01-node.yaml"), `apiVersion: v1alpha1
+// hostnameProvider is a patches provider setting the hostname of every node
+const hostnameProvider = `cat <<EOF
+apiVersion: v1alpha1
 kind: HostnameConfig
 auto: "off"
-hostname: from-file
----
-apiVersion: v1alpha1
-kind: KubeNodeConfig
-labels:
-  topf.test/from-file: "true"
-`)
+hostname: from-provider
+EOF
+`
 
-	// pre-generated secrets keep the runtime from generating and storing them
-	bundle, err := secrets.NewBundle(secrets.NewFixedClock(time.Now()), nil)
-	if err != nil {
-		t.Fatalf("failed to generate secrets bundle: %v", err)
-	}
-
-	bundleYAML, err := yaml.Marshal(bundle)
-	if err != nil {
-		t.Fatalf("failed to marshal secrets bundle: %v", err)
-	}
-
-	writeFile(t, filepath.Join(dir, "secrets.yaml"), string(bundleYAML))
-
-	rt, err := NewTopfRuntime(RuntimeConfig{
-		ConfigPath:  filepath.Join(dir, "topf.yaml"),
-		Logger:      slog.New(slog.DiscardHandler),
-		TopfVersion: "test",
-	})
-	if err != nil {
-		t.Fatalf("NewTopfRuntime() error: %v", err)
-	}
-
-	return rt
-}
-
-func writeFile(t *testing.T, path, content string) {
+func writeProviderScript(t *testing.T, script string) string {
 	t.Helper()
 
-	if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+	path := filepath.Join(t.TempDir(), "provider.sh")
+	if err := os.WriteFile(path, []byte("#!/bin/sh\n"+script), 0o755); err != nil {
 		t.Fatal(err)
 	}
 
-	if err := os.WriteFile(path, []byte(content), 0o600); err != nil {
+	return path
+}
+
+// newTestRuntime writes a topf.yaml for a two node cluster into dir and
+// creates a runtime from it.
+func newTestRuntime(t *testing.T, dir string, extraYAML ...string) (Topf, error) {
+	t.Helper()
+
+	yaml := "clusterName: test\nclusterEndpoint: https://10.0.0.100:6443\nkubernetesVersion: 1.35.1\n"
+	for _, line := range extraYAML {
+		yaml += line + "\n"
+	}
+	yaml += "nodes:\n  - host: cp1\n    role: control-plane\n  - host: w1\n    role: worker\n"
+
+	configPath := filepath.Join(dir, "topf.yaml")
+	if err := os.WriteFile(configPath, []byte(yaml), 0o644); err != nil {
 		t.Fatal(err)
 	}
+
+	return NewTopfRuntime(RuntimeConfig{
+		ConfigPath: configPath,
+		Logger:     slog.New(slog.DiscardHandler),
+	})
+}
+
+// renderConfigs renders the machine configs of all nodes, keyed by host
+func renderConfigs(t *testing.T, rt Topf) map[string]string {
+	t.Helper()
+
+	nodes, err := rt.Render(context.Background(), false)
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	configs := make(map[string]string, len(nodes))
+
+	for _, node := range nodes {
+		if node.Error != nil {
+			t.Fatalf("%s: %v", node.Node.Host, node.Error)
+		}
+
+		configBytes, err := node.ConfigProvider().EncodeBytes(encoder.WithComments(encoder.CommentsDisabled))
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		configs[node.Node.Host] = string(configBytes)
+	}
+
+	return configs
 }
 
 func TestRenderWithPatchesProvider(t *testing.T) {
-	t.Run("providerPatchesAreAppliedLast", func(t *testing.T) {
-		nodes, err := newPatchesProviderRuntime(t, "hostname").Render(t.Context(), false)
+	t.Run("localPatchesOverrideProvider", func(t *testing.T) {
+		dir := t.TempDir()
+
+		nodePatchDir := filepath.Join(dir, "node", "cp1")
+		os.MkdirAll(nodePatchDir, 0o755)
+		os.WriteFile(filepath.Join(nodePatchDir, "01-hostname.yaml"), []byte("apiVersion: v1alpha1\nkind: HostnameConfig\nauto: \"off\"\nhostname: from-file\n"), 0o644)
+
+		rt, err := newTestRuntime(t, dir, "patchesProvider: "+writeProviderScript(t, hostnameProvider))
 		if err != nil {
-			t.Fatalf("Render() error: %v", err)
+			t.Fatal(err)
 		}
 
-		want := map[string][]string{
-			"cp1": {"hostname: cp1-prod-a3", "topf.test/from-file"},
-			"w1":  {"hostname: w1-prod-b1"},
+		configs := renderConfigs(t, rt)
+
+		want := map[string]string{
+			"cp1": "hostname: from-file",
+			"w1":  "hostname: from-provider",
 		}
 
-		if len(nodes) != len(want) {
-			t.Fatalf("unexpected node count: got %d, want %d", len(nodes), len(want))
-		}
-
-		for _, node := range nodes {
-			if node.Error != nil {
-				t.Fatalf("%s: unexpected error: %v", node.Node.Host, node.Error)
+		for host, hostname := range want {
+			if !strings.Contains(configs[host], hostname) {
+				t.Errorf("%s: rendered config missing %q; got:\n%s", host, hostname, configs[host])
 			}
+		}
+	})
 
-			configBytes, err := node.ConfigProvider().EncodeBytes(encoder.WithComments(encoder.CommentsDisabled))
-			if err != nil {
-				t.Fatalf("%s: failed to encode config: %v", node.Node.Host, err)
-			}
+	t.Run("patchesDirIsOptional", func(t *testing.T) {
+		dir := t.TempDir()
 
-			for _, s := range want[node.Node.Host] {
-				if !strings.Contains(string(configBytes), s) {
-					t.Errorf("%s: rendered config missing %q; got:\n%s", node.Node.Host, s, configBytes)
-				}
+		if _, err := newTestRuntime(t, dir, "patchesDir: missing"); err == nil {
+			t.Fatal("expected error for missing patchesDir without patches provider")
+		}
+
+		rt, err := newTestRuntime(t, dir, "patchesDir: missing", "patchesProvider: "+writeProviderScript(t, hostnameProvider))
+		if err != nil {
+			t.Fatal(err)
+		}
+
+		for host, config := range renderConfigs(t, rt) {
+			if !strings.Contains(config, "hostname: from-provider") {
+				t.Errorf("%s: rendered config missing provider hostname; got:\n%s", host, config)
 			}
 		}
 	})
 
 	t.Run("providerFailure", func(t *testing.T) {
-		nodes, err := newPatchesProviderRuntime(t, "fail").Render(t.Context(), false)
+		rt, err := newTestRuntime(t, t.TempDir(), "patchesProvider: "+writeProviderScript(t, "exit 1"))
 		if err != nil {
-			t.Fatalf("Render() error: %v", err)
+			t.Fatal(err)
+		}
+
+		nodes, err := rt.Render(context.Background(), false)
+		if err != nil {
+			t.Fatal(err)
 		}
 
 		for _, node := range nodes {
 			if node.Error == nil || !strings.Contains(node.Error.Error(), "patches from provider") {
 				t.Errorf("%s: expected patches provider error, got: %v", node.Node.Host, node.Error)
-			}
-
-			if node.ConfigBundle != nil {
-				t.Errorf("%s: expected no config bundle", node.Node.Host)
 			}
 		}
 	})

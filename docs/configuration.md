@@ -64,11 +64,11 @@ nodes:
 | `factory`           | No       | `factory.talos.dev` | Talos image factory address. Can be overridden per node |
 | `platform`          | No       | `metal` | Talos platform identifier (e.g. `metal`, `aws`, `gcp`). Can be overridden per node |
 | `secureboot`        | No       | `false` | Use the secure boot installer variant (`<platform>-installer-secureboot`). Can be overridden per node |
-| `patchesDir`        | No       | directory of topf.yaml | Directory containing patch files and node-specific configurations. Relative paths are resolved against the directory containing topf.yaml |
+| `patchesDir`        | No       | directory of topf.yaml | Directory containing patch files and node-specific configurations. Relative paths are resolved against the directory containing topf.yaml. Doesn't need to exist when `patchesProvider` is set |
 | `secretsPath`       | No       | `<dir of topf.yaml>/secrets.yaml` | Path to secrets.yaml. Relative paths are resolved against the directory containing topf.yaml |
 | `secretsProvider`   | No       | -       | Path to binary that manages secrets.yaml                                                 |
 | `nodesProvider`     | No       | -       | Path to binary that provides additional nodes                                            |
-| `patchesProvider`   | No       | -       | Path to binary that generates additional patches for each node (see [patches provider](providers.md#patches-provider)) |
+| `patchesProvider`   | No       | -       | Path to binary that generates patches for each node, applied before the patch files (see [patches provider](providers.md#patches-provider)) |
 | `data`              | No       | -       | Arbitrary key-value data for use in [patch templates](configuration-model.md#templating) |
 | `nodes`             | Yes      | -       | List of [nodes](#node-fields) in the cluster                                             |
 

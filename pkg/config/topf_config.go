@@ -39,12 +39,13 @@ type TopfConfig struct {
 	NodesProvider string `yaml:"nodesProvider,omitempty"`
 
 	// PatchesProvider can be optionally set to the path of a binary which will
-	// generate additional patches for each node. They are applied after the
-	// patches found in PatchesDir.
+	// generate patches for each node. They are applied before the patches
+	// found in PatchesDir.
 	PatchesProvider string `yaml:"patchesProvider,omitempty"`
 
 	// PatchesDir is the directory containing patches and node-specific configurations.
-	// Defaults to the directory containing the config file.
+	// Defaults to the directory containing the config file. It is optional
+	// when a PatchesProvider is configured.
 	PatchesDir string `yaml:"patchesDir,omitempty"`
 
 	// ConfigDir is deprecated: use PatchesDir instead.

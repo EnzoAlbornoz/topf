@@ -52,7 +52,7 @@ nodes:
 
 ## Patches Provider
 
-By default, patches are read from the [patches directory](configuration-model.md). When `patchesProvider` is set, TOPF additionally executes the binary **once per node** to generate patches for that node.
+By default, patches are read from the [patches directory](configuration-model.md). When `patchesProvider` is set, TOPF also executes the binary **once per node** to generate patches for that node. The patches directory then becomes optional: if it does not exist, only the provider patches are applied.
 
 ### Binary Contract
 
@@ -133,7 +133,7 @@ EOF
 
 ### Merge Order
 
-Patches from the provider are applied **after** all patches from the patches directory (`all/`, `<role>/` and `node/<host>/`), so they take precedence when they set the same field. See [merge order](configuration-model.md#merge-order).
+Patches from the provider are applied **before** the patches from the patches directory (`all/`, `<role>/` and `node/<host>/`), so local patches can override fields set by the provider. See [merge order](configuration-model.md#merge-order).
 
 ### Configuration
 
