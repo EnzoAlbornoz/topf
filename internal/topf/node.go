@@ -131,13 +131,17 @@ func (n *Node) ConfigProvider() talosconfig.Provider {
 }
 
 // InstallerImageRef returns the installer image from the generated config.
+// UnattendedInstallConfig takes priority; machine.install.image may carry a
+// stale default during v1.13 → v1.14 upgrades.
 func (n *Node) InstallerImageRef() string {
-	if image := n.ConfigProvider().Machine().Install().Image(); image != "" {
-		return image
+	if unattended := n.ConfigProvider().UnattendedInstallConfig(); unattended != nil {
+		if image := unattended.InstallerImage(); image != "" {
+			return image
+		}
 	}
 
-	if unattended := n.ConfigProvider().UnattendedInstallConfig(); unattended != nil {
-		return unattended.InstallerImage()
+	if image := n.ConfigProvider().Machine().Install().Image(); image != "" {
+		return image
 	}
 
 	return ""
