@@ -128,25 +128,7 @@ hostname: ${host}
 EOF
 ```
 
-### Secret Resolution
-
-The output goes through the same [secret resolution](configuration-model.md#secret-resolution) pipeline as patch files:
-
-1. **SOPS decryption** — if the output is a SOPS-encrypted YAML document, it is decrypted with the `sops` binary
-1. **vals evaluation** — [vals](https://github.com/helmfile/vals) references (e.g. `ref+vault://`) are resolved with the `vals` binary
-
-Values decrypted or resolved this way are [redacted](configuration.md#redacting-sensitive-output) from TOPF's output, so return secrets as vals references or SOPS-encrypted rather than in plaintext:
-
-```yaml
-apiVersion: v1alpha1
-kind: RegistryAuthConfig
-name: ghcr.io
-username: ci
-password: ref+vault://secret/registry/ghcr#/password
-```
-
-!!! note
-    SOPS decrypts the output as a single file, so it can't be the concatenation of several SOPS-encrypted files. To use secrets from several SOPS files, reference them with `ref+sops://` instead.
+Like the output of a [template](configuration-model.md#templating), the output is used as-is and doesn't go through [secret resolution](configuration-model.md#secret-resolution). Secrets copied from `data` stay [redacted](configuration.md#redacting-sensitive-output), but any other secret the provider outputs is not.
 
 ### Merge Order
 

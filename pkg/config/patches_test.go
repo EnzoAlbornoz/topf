@@ -11,7 +11,6 @@ import (
 	"net/netip"
 	"os"
 	"reflect"
-	"slices"
 	"testing"
 
 	"github.com/postfinance/topf/internal/decryption"
@@ -293,7 +292,7 @@ func TestLoadFromProvider(t *testing.T) {
 			return nil, nil
 		})
 
-		if _, _, err := patchCtx.LoadFromProvider(context.Background(), provider); err != nil {
+		if _, err := patchCtx.LoadFromProvider(context.Background(), provider); err != nil {
 			t.Fatalf("LoadFromProvider() error: %v", err)
 		}
 
@@ -343,7 +342,6 @@ func TestLoadFromProvider(t *testing.T) {
 		err            error
 		wantErr        bool
 		wantPatchCount int
-		wantSecrets    []string
 		// applyAndCheck, if non-nil, applies the patches to minimalMachineConfig
 		// and runs extra assertions on the merged YAML bytes.
 		applyAndCheck func(t *testing.T, merged []byte)
@@ -352,19 +350,6 @@ func TestLoadFromProvider(t *testing.T) {
 			name:           "emptyOutput",
 			output:         "",
 			wantPatchCount: 0,
-		},
-		{
-			name:           "valsReference",
-			output:         "machine:\n  network:\n    hostname: ref+echo://from-vals\n",
-			wantPatchCount: 1,
-			wantSecrets:    []string{"from-vals"},
-			applyAndCheck: func(t *testing.T, merged []byte) {
-				t.Helper()
-
-				if !bytes.Contains(merged, []byte("hostname: from-vals")) {
-					t.Errorf("merged config missing resolved hostname; got:\n%s", merged)
-				}
-			},
 		},
 		{
 			name: "multiDocumentOutput",
@@ -409,7 +394,7 @@ machine:
 				return []byte(tt.output), tt.err
 			})
 
-			patches, secrets, err := patchCtx.LoadFromProvider(context.Background(), provider)
+			patches, err := patchCtx.LoadFromProvider(context.Background(), provider)
 			if tt.wantErr {
 				if err == nil {
 					t.Fatal("LoadFromProvider() expected error, got nil")
@@ -428,10 +413,6 @@ machine:
 
 			if len(patches) != tt.wantPatchCount {
 				t.Fatalf("unexpected patch count: got %d, want %d", len(patches), tt.wantPatchCount)
-			}
-
-			if !slices.Equal(secrets, tt.wantSecrets) {
-				t.Errorf("unexpected secrets: got %v, want %v", secrets, tt.wantSecrets)
 			}
 
 			if tt.applyAndCheck == nil {

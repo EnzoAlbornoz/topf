@@ -162,14 +162,10 @@ func (t *topf) generateNodeConfig(ctx context.Context, node *Node) error {
 
 	// provider patches come first, so local patches can override them
 	if provider := cfg.GetPatchesProvider(); provider != nil {
-		providerPatches, providerSecrets, err := patchContext.LoadFromProvider(ctx, provider)
+		patches, err = patchContext.LoadFromProvider(ctx, provider)
 		if err != nil {
 			return fmt.Errorf("couldn't load patches from provider: %w", err)
 		}
-
-		patches = providerPatches
-
-		t.AddSecretsToMask(providerSecrets)
 	}
 
 	localPatches, patchSecrets, err := patchContext.Load()

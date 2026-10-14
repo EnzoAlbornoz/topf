@@ -195,7 +195,7 @@ topf apply
 When `--redact` is enabled (the default), topf replaces secrets and private keys with `*** redacted ***` in any command output. The following values are redacted:
 
 - **Talos secrets bundle**: private keys, bootstrap tokens, encryption secrets, and trustd tokens from `secrets.yaml`
-- **SOPS-encrypted values**: any value that was encrypted with SOPS in `topf.yaml`, in patch files or in the [patches provider](providers.md#patches-provider) output is decrypted internally and its plaintext is redacted from output
+- **SOPS-encrypted values**: any value that was encrypted with SOPS in `topf.yaml` or in patch files is decrypted internally and its plaintext is redacted from output
 - **vals-resolved values**: any value that was resolved from a [vals](https://github.com/helmfile/vals) reference (e.g. `ref+vault://`, `ref+file://`) has its plaintext redacted from output
 
 Disable it only when you need to inspect the raw diff for debugging:
