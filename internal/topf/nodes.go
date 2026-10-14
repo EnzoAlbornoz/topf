@@ -163,6 +163,15 @@ func (t *topf) generateNodeConfig(ctx context.Context, node *Node) error {
 		return fmt.Errorf("couldn't load patches: %w", err)
 	}
 
+	if provider := cfg.GetPatchesProvider(); provider != nil {
+		providerPatches, err := patchContext.LoadFromProvider(ctx, provider)
+		if err != nil {
+			return fmt.Errorf("couldn't load patches from provider: %w", err)
+		}
+
+		patches = append(patches, providerPatches...)
+	}
+
 	versionContract, err := talosconfig.ParseContractFromVersion(node.TalosVersion())
 	if err != nil {
 		return err

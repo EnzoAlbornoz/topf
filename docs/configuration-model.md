@@ -9,6 +9,7 @@ Patches are applied in the following order:
 1. **`all/`** — applied to all nodes
 1. **`<role>/`** — applied to nodes matching the role (`control-plane` or `worker`)
 1. **`node/<host>/`** — applied only to that specific node
+1. **patches provider** — patches generated for that specific node by the [patches provider](providers.md#patches-provider) binary, if `patchesProvider` is configured
 
 !!! tip
     The per-host directory is `node/` (singular), not `nodes/` as each `<host>/` subfolder targets a single node at a time.
@@ -82,6 +83,8 @@ Patches ending with `.yaml.tpl` support [Go templating](https://pkg.go.dev/text/
 | `.Node.RuntimeData.Stage` | Machine stage reported by the live node (`booting`, `installing`, `maintenance`, `running`, `rebooting`, `shutting down`, `resetting`, `upgrading`) |
 
 Runtime data is collected from live nodes by `apply`, `upgrade`, `reset`, and `render --online`. When rendering offline (`render` without `--online`), all runtime fields are empty.
+
+The same context is passed as JSON to the [patches provider](providers.md#patches-provider).
 
 ### Template Functions
 

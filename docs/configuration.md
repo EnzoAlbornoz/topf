@@ -29,6 +29,7 @@ schematicId: 376567988ad370138ad8b2698212367b8edcb69b5fd68c80be1f2ec7d603b4ba
 # Optional: Provider binaries for dynamic configuration
 secretsProvider: /path/to/secrets-provider
 nodesProvider: /path/to/nodes-provider
+patchesProvider: /path/to/patches-provider
 
 # Optional: Arbitrary data for use in patch templates
 data:
@@ -67,6 +68,7 @@ nodes:
 | `secretsPath`       | No       | `<dir of topf.yaml>/secrets.yaml` | Path to secrets.yaml. Relative paths are resolved against the directory containing topf.yaml |
 | `secretsProvider`   | No       | -       | Path to binary that manages secrets.yaml                                                 |
 | `nodesProvider`     | No       | -       | Path to binary that provides additional nodes                                            |
+| `patchesProvider`   | No       | -       | Path to binary that generates additional patches for each node (see [patches provider](providers.md#patches-provider)) |
 | `data`              | No       | -       | Arbitrary key-value data for use in [patch templates](configuration-model.md#templating) |
 | `nodes`             | Yes      | -       | List of [nodes](#node-fields) in the cluster                                             |
 

@@ -38,6 +38,11 @@ type TopfConfig struct {
 	// NodesProvider can be optionally set to the path of a binary which will provide additional nodes
 	NodesProvider string `yaml:"nodesProvider,omitempty"`
 
+	// PatchesProvider can be optionally set to the path of a binary which will
+	// generate additional patches for each node. They are applied after the
+	// patches found in PatchesDir.
+	PatchesProvider string `yaml:"patchesProvider,omitempty"`
+
 	// PatchesDir is the directory containing patches and node-specific configurations.
 	// Defaults to the directory containing the config file.
 	PatchesDir string `yaml:"patchesDir,omitempty"`
@@ -140,4 +145,13 @@ func (t *TopfConfig) GetSecretsProvider(cache *decryption.Cache) providers.Secre
 	}
 
 	return providers.NewFilesystemSecretsProvider(t.SecretsPath, cache)
+}
+
+// GetPatchesProvider returns the configured patches provider, or nil if none is configured
+func (t *TopfConfig) GetPatchesProvider() providers.PatchesProvider {
+	if t.PatchesProvider == "" {
+		return nil
+	}
+
+	return providers.NewBinaryPatchesProvider(t.PatchesProvider)
 }
